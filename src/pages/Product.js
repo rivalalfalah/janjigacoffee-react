@@ -22,13 +22,11 @@ class Product extends Component {
               <Link to="/" className={`${styles["font"]} ${styles["url"]}`}>
                 Home
               </Link>
-              <Link to="/product">
-                <span
+                <Link to="/product"
                   className={`${styles["font"]} ${styles["url"]} ${styles["product-url"]}`}
                 >
                   Product
-                </span>
-              </Link>
+                </Link>
               <span className={`${styles["font"]} ${styles["url"]}`}>
                 Your chart
               </span>

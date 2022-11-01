@@ -1,10 +1,8 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styles from "../styles/Home.module.css";
-
 import coffee from "../assets/images/coffee-3.png";
 import checklist1 from "../assets/images/checklist.png";
-import imageTop from "../assets/images/homebg.jpg";
 import image from "../assets/images/bgh.png";
 import checklist2 from "../assets/images/checklist2.png";
 import maps from "../assets/images/maps.png";
@@ -26,22 +24,26 @@ class Home extends Component {
         <header className={styles["header1"]}>
           <nav className={styles["nav"]}>
             <span className={styles["tittle-web"]}>
-              <Link to="/home"><img src={coffee} alt="coffee" /></Link>
+              <Link to="/">
+                <img src={coffee} alt="coffee" />
+              </Link>
               <label for="tittle" className={styles["font"]}>
                 Coffee Shop
               </label>
             </span>
             <span className={styles["nav-rev"]}>
-              <span
+              <Link
+                to="/home"
                 className={`${styles["font"]} ${styles["url"]} ${styles["home-url"]}`}
-              ><Link to="/home">
+              >
                 Home
-                </Link>
-              </span>
-              <span className={`${styles["font"]} ${styles["url"]}`}>
-                <Link to="/product">
-                Product</Link>
-              </span>
+              </Link>
+              <Link
+                to="/product"
+                className={`${styles["font"]} ${styles["url"]}`}
+              >
+                Product
+              </Link>
               <span className={`${styles["font"]} ${styles["url"]}`}>
                 Your chart
               </span>
@@ -50,8 +52,12 @@ class Home extends Component {
               </span>
             </span>
             <span className={styles["author-button"]}>
-              <Link to="login"><button className={styles["login"]}>Login</button></Link>
-              <Link to="sign-up"><button className={styles["sign-in"]}>Sign In</button></Link>
+              <Link to="login">
+                <button className={styles["login"]}>Login</button>
+              </Link>
+              <Link to="sign-up">
+                <button className={styles["sign-in"]}>Sign In</button>
+              </Link>
             </span>
           </nav>
         </header>

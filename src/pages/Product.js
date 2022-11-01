@@ -10,19 +10,25 @@ class Product extends Component {
         <header className={styles["header1"]}>
           <nav className={styles["header"]}>
             <span className={styles["tittle-web"]}>
-              <Link to="/"><img src={coffee} alt="coffee" /></Link>
+              <Link to="/">
+                <img src={coffee} alt="coffee" />
+              </Link>
               <label for="tittle" className={styles["font"]}>
                 Coffee Shop
               </label>
             </span>
 
             <span className={styles["nav-rev"]}>
-              <Link to="/home"><span className={`${styles["font"]} ${styles["url"]}`}>Home</span></Link>
-              <Link to="/product"><span
-                className={`${styles["font"]} ${styles["url"]} ${styles["product-url"]}`}
-              >
-                Product
-              </span></Link>
+              <Link to="/" className={`${styles["font"]} ${styles["url"]}`}>
+                Home
+              </Link>
+              <Link to="/product">
+                <span
+                  className={`${styles["font"]} ${styles["url"]} ${styles["product-url"]}`}
+                >
+                  Product
+                </span>
+              </Link>
               <span className={`${styles["font"]} ${styles["url"]}`}>
                 Your chart
               </span>

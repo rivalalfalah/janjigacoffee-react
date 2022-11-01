@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 import coffee from "../assets/images/coffee-3.png";
 import checklist1 from "../assets/images/checklist.png";
 import imageTop from "../assets/images/homebg.jpg";
+import image from "../assets/images/bgh.png";
 import checklist2 from "../assets/images/checklist2.png";
 import maps from "../assets/images/maps.png";
 import hazelnut from "../assets/images/hazelnut-latte.png";
@@ -76,7 +77,7 @@ class Home extends Component {
           </section>
           <section className={styles["middle"]}>
             <span className={styles["image-top"]}>
-              <img src={imageTop} alt="" />
+              <img src={image} alt="" />
             </span>
             <span className={styles["side-image"]}>
               <label className={styles["we-provide-text"]} for="cof">

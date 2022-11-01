@@ -34,21 +34,21 @@ function Login() {
     e.preventDefault();
     // console.log(email, passwords);
     axios
-      .post(`http://localhost:8080/api/auth`, {
+      .post(`${process.env.REACT_APP_BACKEND_HOST}api/auth`, {
         email, // <= body
         password, // <= body
       })
       .then((response) => {
-        alert("Login Success");
+        //("Login Success");
          console.log(response.data);
         localStorage.setItem(
           "token",
-          JSON.stringify(response.data.result.data.token)
+          JSON.stringify(response.data.data.token)
         );
         navigate("/");
       })
       .catch((err) => {
-        alert("Email or Password is WRONG !!!");
+        //("Email or Password is WRONG !!!");
         console.log(err);
       });
   };
@@ -77,7 +77,7 @@ function Login() {
           <br />
           <input
             className={styles.input}
-            type="email"
+            type="text"
             placeholder="Enter your email address here"
             onChange={handleEmail}
           />

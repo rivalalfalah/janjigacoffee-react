@@ -32,7 +32,7 @@ import coffee from "../assets/images/coffee-3.png"
       <section className={styles["box-left"]}>
         <section className={styles["page-tittle"]}>
           <label className={styles["page-tittle-1"]}>Favorite & Promo</label>
-          <label className={styles["page-tittle-2"]}>`> Cold Brew</label>
+          <label className={styles["page-tittle-2"]}>&gt; Cold Brew</label>
         </section>
         <section className={styles["img-product"]}>
           <img className={styles["product-profile"]} src="./assets/product-img.png" alt="" />

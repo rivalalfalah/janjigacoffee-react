@@ -1,0 +1,764 @@
+@font-face {
+    font-family: "rubik";
+    src: url(../assets/fonts/Rubik-Bold.ttf);
+}
+@font-face {
+    font-family: "poppinsL";
+    src: url(../assets/fonts/Poppins-Light.otf);
+}
+
+@font-face {
+    font-family: "poppinsB";
+    src: url(../assets/fonts/Poppins-Bold.otf);
+}
+
+.header1 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 15%;
+    width: 100%;
+}
+
+.nav {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: auto;
+}
+
+.tittle-web {
+    position: absolute;
+    left: 15%;
+}
+.home-url {
+    color: #6A4029 !important;
+    font-size: xx-large;
+}
+.nav-rev{
+    position: absolute;
+    left: 30%;
+    width: 40%;
+    font-size: x-large;
+}
+.author-button {
+    position: absolute;
+    left: 80%;
+    width: 20%;
+}
+
+.font {
+    font-family: "rubik";
+}
+
+.font.url {
+    color: grey;
+    text-decoration: none;
+    margin-left: 5%;
+}
+
+.login {
+    position: absolute;
+    color: black;
+    background-color: white;
+    border: none;
+    width: 10%;
+    left: 0%;
+    font-family: "rubik";
+    cursor: pointer;
+}
+
+.sign-in {
+    position: absolute;
+    left: 40%;
+    background-color: #FFBA33 ;
+    color: #6A4029;
+    width: 7vw;
+    height: 4vh;
+    border-radius: 10%;
+    border: none;
+    font-family: "rubik";
+    cursor: pointer;
+}
+.main {
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    width: 100%;
+    height: 500%;
+}
+section.top {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height : 40%
+}
+.background {
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: 40%;
+    background-image: url(../assets/images/bghome.png);
+    background-size: cover;
+    background-repeat:repeat;
+}
+
+.start-your-text {
+    color: white;
+    position: absolute;
+    left: 8%;
+    top:0%;
+    font-family: "rubik";
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.detail-top {
+    color: white;
+    position: absolute;
+    left: 8%;
+    top:30%;
+    font-family: "rubik";
+    font-size: medium;
+}
+br.top {
+    display: block;
+    content: "";
+    margin-bottom: 2%;
+}
+
+.get-started {
+    position: absolute;
+    top: 60%;
+    left: 8%;
+    color: #6A4029;
+    background-color: #FFBA33;
+    width: 50%;
+    height: 20%;
+    font-family: "rubik";
+    font-size: x-large;
+    border-radius: 10%;
+    border-color: #FFBA33;
+    cursor: pointer;
+}
+
+
+.middle {
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    width: 100%;
+    height: 20%;
+    background-color: #f8f8f8;
+}
+
+ .box1 {
+    position: absolute;
+    top:80%;
+    left:15%;
+    width: 70%;
+    height: 30%;
+    background-color: white !important;
+}
+
+.image-top {
+    position: absolute;
+    top: 20%;
+    left:3%;
+}
+
+.side-image {
+    position: absolute;
+    top: 30%;
+    right:15%
+}
+
+.we-provide-text {
+    font-family: "rubik";
+    font-size: xx-large;
+    ;
+}
+
+.you-can-text {
+    font-family: "rubik";
+    font-size: medium;
+}
+
+br.enter {
+    display: block;
+    content: "";
+    margin-bottom: 1% ;
+}
+
+br.enter2 {
+    display: block;
+    content: "";
+    margin-bottom: 5%;
+}
+
+div.checklist {
+    position: absolute;
+    top: 55%;
+    right: 12%;
+}
+.middle-font {
+    font-family: "rubik";
+}
+
+.here-is-text {
+    position: absolute;
+    display: block;
+    top : 100%;
+    left: 35%;
+    text-align: center;
+}
+
+.hyper {
+    font-weight: bolder;
+    font-size: x-large;
+}
+.product-favorite {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    height: 10%;
+}
+
+.favorite-product-center {
+    position: absolute;
+    top: 0%;
+    left:40%;
+    width: auto;
+    height: auto;
+    
+}
+
+.block1 {
+    position: absolute;
+    left: 5%;
+    border-style: solid;
+    height: 100%;
+    width:20%;
+    border-width: thin;
+    border-color: #dddd;
+}
+
+.block2 {
+    position: absolute;
+    left: 35%;
+    border-style: solid;
+    height: 100%;
+    width:20%;
+    border-width: thin;
+    border-color: #dddd;
+}
+
+.block3 {
+    position: absolute;
+    top: 0%;
+    right: 15%;
+    border-style: solid;
+    height: 100%;
+    width:20%;
+    border-width: thin;
+    border-color: #dddd;
+    left:65%
+}
+
+.bottom {
+    position: absolute;
+    top : 58%;
+    width: 100%;
+    height: 20%;
+}
+
+.bottom-top {
+    position: absolute;
+    left: 40%;
+    display: block;
+    text-align: center;
+}
+
+.visit-our-text {
+    font-family: "rubik";
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.see-our-text {
+    font-family: "rubik";
+    font-size: small;
+}
+
+.maps {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.our-partner {
+    font-family: "rubik";
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.text-our-partner {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+}
+
+.img-partner {
+    width: 10%;
+    height: 50%;
+    margin-left: 8%;
+}
+
+.all-partner-img {
+    position: absolute;
+    left: 0%;
+    top: 130%;
+    width: 100%;
+    height: 15%;
+}
+
+.last-content {
+    position: absolute;
+    top:90%;
+    left: 0%;
+    width: 100%;
+    height: 18%;
+}
+
+.loved-by-text{
+    position: absolute;
+    left: 35%;
+    display: block;
+    text-align: center;
+}
+
+.loved-by {
+    font-family: "rubik";
+    font-size: x-large;
+    font-weight: bold;
+}
+.these-are {
+    font-family: "rubik";
+    font-size: medium;
+    font-weight: lighter;
+}
+
+.footer {
+    position: absolute;
+    left: 0%;
+    top:565%;
+    width: 100%;
+    height: 100%;
+    background-color: #F8F8F8;
+}
+
+.font {
+    font-family: "rubik";
+}
+
+.font.url {
+    color: grey;
+    text-decoration: none;
+    letter-spacing: 1%;
+}
+
+.footer-right {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    width: 50%;
+    height: 100%;
+}
+
+.footer-engage {
+    position: absolute;
+    top: 20%;
+    right: 25%;
+}
+.footer-product {
+ position: absolute;
+ left: 0%;
+ top: 20%
+}
+
+.footer-left {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+}
+
+.profile-picture {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 15%;
+    border-radius: 10000%;
+}
+
+.facebook {
+    background-color: #FFBA33;
+    background: url(../assets/images/facebook.png);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: #FFBA33;
+    color: #6A4029;
+    border-radius: 1000px;
+    cursor: pointer;
+}
+
+.twitter {
+    background-color: #FFBA33;
+    background: url(../assets/images/twitter.png);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: #FFBA33;
+    color: #6A4029;
+    border-radius: 1000px;
+    cursor: pointer;
+}
+
+.instagram {
+    background-color: #FFBA33;
+    background: url(../assets/images/instagram.png);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: #FFBA33;
+    color: #6A4029;
+    border-radius: 1000px;
+    cursor: pointer;
+}
+
+.footer-url{
+    text-decoration: none;
+    color: #4F5665;
+    font-size: large;
+    display: block;
+    margin-top: 20%;
+}
+
+.img-block{
+    position: absolute;
+    top: -20%;
+    left: 25%;
+    border-radius: 500%;
+}
+
+.name-favorite-product {
+    position: absolute;
+    font-family: "rubik";
+    top: 20%;
+    left : 30%
+}
+div.checklist-last {
+    position: absolute;
+    top:30%;
+    left: 10%;
+    width: 120%;
+    font-family: "rubik";
+}
+
+div.comment {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    height: 30%;
+}
+
+.square1 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 25%;
+    height: 100%;
+    border-style: solid;
+    border-width : thin;
+    border-color: #4F5665;
+}
+.block1:hover{
+    border-color: #6A4029;
+}
+
+.square2 {
+    position: absolute;
+    top: 0%;
+    left: 30%;
+    width: 25%;
+    height: 100%;
+    border-style: solid;
+    border-width : thin;
+    border-color: #4F5665;
+}
+.block2:hover{
+    border-color: #6A4029;
+
+}
+.square3 {
+    position: absolute;
+    top: 0%;
+    left: 60%;
+    width: 25%;
+    height: 100%;
+    border-style: solid;
+    border-width : thin;
+    border-color: #4F5665;
+}
+.block3:hover {
+    border-color: #6A4029;
+}
+.profile-comment {
+    position: absolute;
+    top: 10%;
+    left:10%;
+    font-family: "rubik";
+}
+
+.comment-section {
+    position: absolute;
+    top: 40%;
+    left:5%;
+    font-family: "rubik";
+}
+
+.img-comment{
+    border-radius: 5000%;
+}
+
+.button-cursor {
+    position: absolute;
+    top: 65%;
+    left:80%;
+    height: 8%;
+    width: 12%;
+}
+
+.next{
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: #6A4029;
+    border-radius: 5000%;
+    cursor: pointer;
+    background-position: center;
+}
+
+.img-next {
+    position: absolute;
+    left: 65%;
+    top:40%;
+    width: 25%;
+    height: 25%;
+    cursor: pointer;
+}
+
+.previous{
+    position: absolute;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+    color:#6A4029;
+    border-radius: 5000%;
+    background-position: center;
+    cursor: pointer;
+}
+.img-previous {
+    position: absolute;
+    left: 10%;
+    top:40%;
+    width: 25%;
+    height: 25%;
+    cursor: pointer;
+}
+.opening {
+    position: absolute;
+    top:5%;
+    width : 50%;
+    height: 50%;
+}
+
+.price {
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    font-family: "rubik";
+}
+
+.buy {
+    position: absolute;
+    width: 12vw;
+    height: 5vh;
+    bottom: 5%;
+    left: 20%;
+    background-color: white;
+    border-radius: 30%;
+    border-color: #FFBA33;
+    font-family: "rubik";
+    color: #6A4029;
+}
+
+.buy:hover {
+    background-color: #FFBA33;
+    cursor: pointer;
+}
+
+.click {
+    background-color: #6A4029;
+    width: 1vw;
+    height: 2vh;
+    border-radius: 50000%;
+}
+.no-click {
+    background-color:#DDE0E4;
+    width: 1vw;
+    height: 2vh;
+    border-radius: 50000%;
+    cursor: pointer;
+}
+
+.button3{
+    position: absolute;
+    top:65% ;
+    left : 10%
+}
+
+.checkpromo {
+    position: absolute ;
+    top: -15%;
+    left: 15%;
+    height: 30%;
+    width : 70%;
+    border-style: solid;
+    border-width: thin;
+    border-color: #DDE0E4;
+    background-color: white;
+}
+
+.img-footer {
+    position: absolute;
+    top : 20%;
+    left: 20%;
+}
+
+.detail-footer {
+    position : absolute;
+    top: 30%;
+    left: 20%;
+}
+
+.btn-footer {
+    position: absolute;
+    top : 40%;
+    left: 20%;
+}
+
+.font-footer-up {
+    font-size: xx-large;
+}
+
+.checkpromo-text {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    font-family: "rubik";
+}
+.see-promo {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    width: 30%;
+    height: 25%;
+    color: #6A4029;
+    background-color: #FFBA33;
+    font-family: "rubik";
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.box1-1 {
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    border-right-style: solid;
+    border-color: #EEEFF2;
+}
+
+.box1-2 {
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    left: 40%;
+    border-right-style: solid;
+    border-color: #EEEFF2;
+}
+
+.box1-3 {
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    left : 70%
+}
+
+.img-loc {
+    position: absolute;
+    top: 47%;
+    left:30%;
+    width: 15%;
+    height: 20%;
+    border-radius: 5000%;
+    background-repeat: no-repeat;
+}
+
+.promo-text-1 {
+    font-size: xx-large;
+}
+
+.button-loc {
+    width:100% ;
+    height: 100%;
+    background-color: #FFBA33;
+    border-radius: 5000%;
+    cursor: pointer;
+}
+
+.center-img {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    cursor: pointer;
+}
+
+.center-love {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    cursor: pointer;
+}
+
+.upto {
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    font-family: "rubik";
+    font-size: x-large;
+}
+
+.stores {
+    position: absolute;
+    top: 60%;
+    left: 48%;
+    font-family: "rubik";
+}

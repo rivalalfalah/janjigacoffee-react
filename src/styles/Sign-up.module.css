@@ -1,0 +1,222 @@
+@font-face {
+    font-family: "rubik";
+    src: url(../assets/fonts/Rubik-Bold.ttf);
+}
+@font-face {
+    font-family: "poppins";
+    src: url(../assets/fonts/Poppins-Bold.otf);
+}
+.aside {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 175%;
+    width: 50%;
+}
+.absolute {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 50%;
+    height: 100%;
+    border: red 10px;
+}
+.image-side {
+    display: flexbox;
+    width: 100%;
+    height: 100%;
+}
+
+.sign-up-btn {
+    margin-top: 5px;
+    background: #FFBA33;
+    border:#FFBA33;
+    height: 7vh;
+    width: 20vw;
+    border-radius: 15px ;
+    color: #6A4029;
+    font-family: "rubik";
+    font-size: small;
+    font-weight: bold;
+    cursor: pointer;
+}
+.google-btn {
+    background-color: white;
+    margin-top: 10px;
+    border: white;
+    height: 7vh;
+    width: 20vw;
+    font-family: "poppins";
+    background: url("../assets/images/google-logo.png");
+    background-position: 73px 10px;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.login-here {
+    background-color: #6A4029;
+    margin-top : 50px;
+    border : #6A4029;
+    height: 7vh;
+    width: 20vw;
+    font-family : "rubik";
+    border-radius: 15px;
+    color: white; 
+    cursor: pointer;
+}
+
+.input {
+    margin-top: 20px;
+    border-radius: 12px;
+    height: 7vh;
+    width: 20vw;
+    border-color: grey ;
+}
+
+.form {
+    display: inline-block;
+    margin-top: 20px;
+    font-family: "rubik";
+    font-size: smaller;
+}
+
+main section.register-form{
+ position: absolute;
+ left: 25%;
+ top: 15%
+
+}
+.title-web {
+    font-family: "rubik";
+    font-size: medium;
+}
+.page {
+    position: relative;
+    font-family: "rubik";
+    font-size:larger;
+    color: #6A4029;
+    left:70%
+}
+
+.already-account {
+    margin-top: 20px;
+    font-family: "rubik";
+    font-size: smaller;
+    color: grey;
+    
+}
+
+.ht {
+    color: grey;
+    font-family: "rubik";
+}
+
+.detail {
+    display: inline-block;
+    margin-top: 25px;
+    font-family: "rubik";
+    font-size: medium;
+    color: #4F5665;
+    line-height: 40px;
+}
+
+.facebook {
+    background-color: #FFBA33;
+    background: url(../assets/images/facebook.png);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: #FFBA33;
+    color: #6A4029;
+    border-radius: 1000px;
+    cursor: pointer;
+}
+
+.twitter {
+    background-color: #FFBA33;
+    background: url(../assets/images/twitter.png);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: #FFBA33;
+    color: #6A4029;
+    border-radius: 1000px;
+    cursor: pointer;
+}
+
+.instagram {
+    background-color: #FFBA33;
+    background: url(../assets/images/instagram.png);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: #FFBA33;
+    color: #6A4029;
+    border-radius: 1000px;
+    cursor: pointer;
+}
+
+.footer1{
+    position: absolute;
+    top:100%;
+    right: 0%;
+    width: 50%;
+    height: 75%;
+}
+
+.footer-left {
+    top: 15%;
+    left: 5%;
+    position: absolute;
+    width : 50%;
+    height: 85%;
+}
+
+.copyright {
+    font-family: "rubik";
+    color: grey;
+    display: inline-block;
+    margin-top: 5%;
+    font-size: large
+}
+
+.footer-right {
+    font-family: "rubik";
+    position: absolute;
+    top : 15%;
+    left: 55%;
+    width : 45%;
+    height:80% ;
+    
+}
+
+br.enter2 {
+    display: block;
+    content: "";
+    margin-bottom:10%;
+}
+
+br.enter3 {
+    display: block;
+    content: "";
+    margin-bottom:15%;
+}
+
+
+.engage {
+    position: absolute;
+    top: 60%;
+    display: block;
+}
+
+.right {
+    margin-left: 10%;
+}
+
+.url-font {
+    text-decoration: none;
+    color: #4F5665;
+}

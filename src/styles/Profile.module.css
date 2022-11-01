@@ -1,0 +1,317 @@
+@font-face {
+    font-family: "rubik";
+    src: url(../assets/fonts/Rubik-Bold.ttf);
+}
+@font-face {
+    font-family: "poppins";
+    src: url(../assets/fonts/Poppins-Bold.otf);
+}
+
+.change-btn {
+    position: absolute;
+    left: 100%;
+    background-color: #6A4029;
+    background-image: url(../assets/images/edit.png);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: #FFBA33;
+    color: #6A4029;
+    border-radius: 1000px;
+}
+
+.facebook {
+    background-color: #FFBA33;
+    background: url(../assets/images/facebook.png);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: #FFBA33;
+    color: #6A4029;
+    border-radius: 1000px;
+}
+
+.twitter {
+    background-color: #FFBA33;
+    background: url(../assets/images/twitter.png);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: #FFBA33;
+    color: #6A4029;
+    border-radius: 1000px;
+
+}
+
+.instagram {
+    background-color: #FFBA33;
+    background: url(../assets/images/instagram.png);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: #FFBA33;
+    color: #6A4029;
+    border-radius: 1000px;
+}
+
+.header {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 10%;
+    width: 100%;
+}
+
+.nav {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: auto;
+}
+
+.tittle-web {
+    position: absolute;
+    left: 15%;
+}
+
+.nav-rev{
+    position: absolute;
+    left: 45%;
+}
+.profile-pict {
+    position: absolute;
+    right: 15%;
+}
+.main {
+    position: absolute;
+    left: 0%;
+    top: 15%;
+    height: 115%;
+    width: 100%;
+    background-image: url(../assets/images/bgprofile.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+section.user-change{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    color: white;
+}
+section.profile-detail {
+    position: absolute;
+    top: 15%;
+    left:15%;
+    width: 75%;
+    height: 75%;
+    background-color: #F8F8F8;
+    border-radius: 3%;
+}
+
+.profile-btn {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    width: auto;
+    height: auto;
+}
+
+section.profile-form {
+    position: absolute;
+    top: 20%;
+    left : 40%;
+    width: 40%;
+    height: 65%;
+    background-color: #FFFF;
+}
+
+.footer {
+    position: absolute;
+    left: 0%;
+    top: 120%;
+    height: 50%;
+    width: 100%;
+    background-color: #F8F8F8;
+}
+
+.font {
+    font-family: "rubik";
+    color: #9f9f9f;
+}
+
+.font.url {
+    color: grey;
+    text-decoration: none;
+    letter-spacing: 1%;
+}
+
+.footer-right {
+    position: absolute;
+    right: 0%;
+    top: 15%;
+    width: 50%;
+    height: auto;
+}
+
+.footer-engage {
+    position: absolute;
+    right: 25%;
+}
+.footer-product {
+ position: absolute;
+ left: 20%;
+}
+
+.footer-left {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.profile-picture {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 15%;
+    border-radius: 10000%;
+}
+
+.email-profile {
+    position: absolute;
+    top:32%;
+    left: 7%;
+    text-align: center;
+}
+
+.user-profile-text {
+    font-size:xx-large;
+}
+
+
+.choose-foto-btn {
+    width: 12vw;
+    height: 4vh;
+    background-color: #FFBA33;
+    color: #6A4029;
+    border-radius: 30%;
+    border: #FFBA33;
+}
+
+.remove-foto-btn {
+    width: 12vw;
+    height: 4vh;
+    background-color: #6A4029;
+    color: white;
+}
+
+.edit-password-btn {
+    width: 12vw;
+    height: 4vh;
+    margin-top: 3vh;
+    color: #6A4029;
+    background-color: white;
+    font-size: large;
+}
+
+.save-change-btn {
+    width: 12vw;
+    height: 4vh;
+    background-color: #6A4029;
+    color: white;
+    font-size: large;
+}
+
+.cancel-btn {
+    width: 12vw;
+    height: 4vh;
+    background-color: #FFBA33;
+    color: #6A4029;
+    font-size: large;
+}
+
+.log-out-btn {
+    width: 12vw;
+    height: 4vh;
+    color: #6A4029;
+    background-color: white;
+    font-size: large;
+}
+
+.change-save {
+    display: block;
+    text-align: center;
+}
+
+.footer-url{
+    text-decoration: none;
+    color: #4F5665;
+    font-size: large;
+    display: block;
+    margin-bottom: 30%;
+}
+
+.engage{
+    display: block;
+    margin-bottom: 10%;
+    font-size: x-large;
+}
+
+.product{
+    display: block;
+    margin-bottom: 10%;
+    font-size: x-large;
+}
+
+.mobile-number {
+    position: absolute;
+    left: 50%;
+}
+
+.birth {
+    position: absolute;
+    left: 52%;
+}
+
+.search {
+    width: 2vw;
+    height:4vh;
+    background-image:url(../assets/images/search.png);
+    cursor: pointer;
+}
+.chat {
+    width: 2vw;
+    height: 4vh;
+    background-image: url(../assets/images/chat.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.form-top{
+    position: absolute;
+    top:15%
+}
+.form-bottom {
+    position: absolute;
+    top : 40%;
+    width: 100%;
+    height: 50%;
+}
+
+.font-detail {
+    font-family: "rubik";
+    font-size: x-large;
+}
+
+.input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.radio {
+    position: absolute;
+    bottom: 0%;
+}

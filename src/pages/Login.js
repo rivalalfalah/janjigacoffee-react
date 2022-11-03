@@ -46,6 +46,7 @@ function Login() {
           JSON.stringify(response.data.data.token)
         );
         localStorage.setItem("user_id",JSON.stringify(response.data.data.payLoad.user_id));
+        localStorage.setItem("role_id",JSON.stringify(response.data.data.payLoad.role_id));
         navigate("/");
       })
       .catch((err) => {

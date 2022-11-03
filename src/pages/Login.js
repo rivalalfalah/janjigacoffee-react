@@ -45,7 +45,7 @@ function Login() {
           "token",
           JSON.stringify(response.data.data.token)
         );
-        localStorage.setItem("user_id",JSON.stringify(response.data.data.payload));
+        localStorage.setItem("user_id",JSON.stringify(response.data.data.payLoad.user_id));
         navigate("/");
       })
       .catch((err) => {

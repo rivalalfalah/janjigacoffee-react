@@ -8,11 +8,11 @@ class Product extends Component {
   // State awal
   state = {
     product: [],
-    favorite: `${process.env.REACT_APP_BACKEND_HOST}api/product/?sorting=favorite&page=1&limit=12`,
-    coffee: `${process.env.REACT_APP_BACKEND_HOST}api/product/?category=coffee&page=1&limit=12`,
-    non_coffee: `${process.env.REACT_APP_BACKEND_HOST}api/product/?category=non_coffee&page=1&limit=12`,
-    food: `${process.env.REACT_APP_BACKEND_HOST}api/product/?category=foods&page=1&limit=12`,
-    addons: `${process.env.REACT_APP_BACKEND_HOST}api/product/?category=addon&page=1&limit=12`,
+    favorite: `${process.env.REACT_APP_BACKEND_HOST}api/products/?sorting=favorite&page=1&limit=12`,
+    coffee: `${process.env.REACT_APP_BACKEND_HOST}api/products/?category=coffee&page=1&limit=12`,
+    non_coffee: `${process.env.REACT_APP_BACKEND_HOST}api/products/?category=non_coffee&page=1&limit=12`,
+    food: `${process.env.REACT_APP_BACKEND_HOST}api/products/?category=foods&page=1&limit=12`,
+    addons: `${process.env.REACT_APP_BACKEND_HOST}api/products/?category=addon&page=1&limit=12`,
     searchParams: {},
   };
 
@@ -168,13 +168,86 @@ class Product extends Component {
         <main className={styles["main1"]}>
           <nav className={styles["main"]}>
             <div className={styles["link"]}>
-              <span className={`${["font-nav"]} ${["favorite-product-url"]} `}>
+              <span
+                className={`${["font-nav"]} ${["favorite-product-url"]} `}
+                onClick={() => {
+                  this.Favorite();
+                  this.setState(
+                    {
+                      searchParams: { sorting: "favorite" },
+                    },
+                    () => {
+                      this.props.setSearchParams(this.state.searchParams);
+                    }
+                  );
+                }}
+              >
                 Favorite product
               </span>
-              <span className={styles["font-nav"]}>Coffee</span>
-              <span className={styles["font-nav"]}>Non Coffee</span>
-              <span className={styles["font-nav"]}>Foods</span>
-              <span className={styles["font-nav"]}>Add ons</span>
+              <span
+                className={styles["font-nav"]}
+                onClick={() => {
+                  this.Coffee();
+                  this.setState(
+                    {
+                      searchParams: { sorting: "coffee" },
+                    },
+                    () => {
+                      this.props.setSearchParams(this.state.searchParams);
+                    }
+                  );
+                }}
+              >
+                Coffee
+              </span>
+              <span
+                className={styles["font-nav"]}
+                onClick={() => {
+                  this.NonCoffee();
+                  this.setState(
+                    {
+                      searchParams: { sorting: "non coffee" },
+                    },
+                    () => {
+                      this.props.setSearchParams(this.state.searchParams);
+                    }
+                  );
+                }}
+              >
+                Non Coffee
+              </span>
+              <span
+                className={styles["font-nav"]}
+                onClick={() => {
+                  this.Food();
+                  this.setState(
+                    {
+                      searchParams: { sorting: "food" },
+                    },
+                    () => {
+                      this.props.setSearchParams(this.state.searchParams);
+                    }
+                  );
+                }}
+              >
+                Foods
+              </span>
+              <span
+                className={styles["font-nav"]}
+                onClick={() => {
+                  this.AddOn();
+                  this.setState(
+                    {
+                      searchParams: { sorting: "addon" },
+                    },
+                    () => {
+                      this.props.setSearchParams(this.state.searchParams);
+                    }
+                  );
+                }}
+              >
+                Add ons
+              </span>
             </div>
           </nav>
           <section className={styles["product-box"]}>

@@ -2,8 +2,71 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styles from "../styles/Product.module.css";
 import coffee from "../assets/images/coffee-3.png";
-
+import CardProduct from "../Components/CardProduct";
+import axios from "axios";
 class Product extends Component {
+  // State awal
+  state = {
+    product: [],
+    favorite: `${process.env.REACT_APP_BACKEND_HOST}api/product/?sorting=favorite&page=1&limit=12`,
+    coffee: `${process.env.REACT_APP_BACKEND_HOST}api/product/?category=coffee&page=1&limit=12`,
+    non_coffee: `${process.env.REACT_APP_BACKEND_HOST}api/product/?category=non_coffee&page=1&limit=12`,
+    food: `${process.env.REACT_APP_BACKEND_HOST}api/product/?category=foods&page=1&limit=12`,
+    addons: `${process.env.REACT_APP_BACKEND_HOST}api/product/?category=addon&page=1&limit=12`,
+    searchParams: {},
+  };
+
+  // Kondisi ketika di refresh
+  componentDidMount() {
+    axios
+      .get(this.state.favorite)
+      .then((res) => {
+        this.setState({ product: res.data.result.data });
+      })
+      .catch((err) => console.log(err));
+  }
+
+  componentDidUpdate() {}
+
+  costing = (price) => {
+    return (
+      "IDR " +
+      parseFloat(price)
+        .toFixed()
+        .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")
+    );
+  };
+
+  Favorite = () => {
+    axios
+      .get(this.state.favorite)
+      .then((res) => this.setState({ product: res.data.result.data }))
+      .catch((err) => console.log(err));
+  };
+  Coffee = () => {
+    axios
+      .get(this.state.coffee)
+      .then((res) => this.setState({ product: res.data.result.data }))
+      .catch((err) => console.log(err));
+  };
+  NonCoffee = () => {
+    axios
+      .get(this.state.non_coffee)
+      .then((res) => this.setState({ product: res.data.result.data }))
+      .catch((err) => console.log(err));
+  };
+  Food = () => {
+    axios
+      .get(this.state.food)
+      .then((res) => this.setState({ product: res.data.result.data }))
+      .catch((err) => console.log(err));
+  };
+  AddOn = () => {
+    axios
+      .get(this.state.addons)
+      .then((res) => this.setState({ product: res.data.result.data }))
+      .catch((err) => console.log(err));
+  };
   render() {
     return (
       <>
@@ -22,11 +85,12 @@ class Product extends Component {
               <Link to="/" className={`${styles["font"]} ${styles["url"]}`}>
                 Home
               </Link>
-                <Link to="/product"
-                  className={`${styles["font"]} ${styles["url"]} ${styles["product-url"]}`}
-                >
-                  Product
-                </Link>
+              <Link
+                to="/product"
+                className={`${styles["font"]} ${styles["url"]} ${styles["product-url"]}`}
+              >
+                Product
+              </Link>
               <span className={`${styles["font"]} ${styles["url"]}`}>
                 Your chart
               </span>
@@ -114,317 +178,20 @@ class Product extends Component {
             </div>
           </nav>
           <section className={styles["product-box"]}>
-            <div className={styles["column1"]}>
-              <div className={styles["box1"]}>
-                <div className={styles["square"]}>
-                  <img
-                    className={styles["img-product"]}
-                    src="./assets/veggie.png"
-                    alt="veggie"
-                  />
-                  <br />
-                  <label className={styles["name-product"]} for="name">
-                    Veggie <br className="enter" /> tomato{" "}
-                    <br className="enter" />
-                    mix
-                  </label>
-                  <br className="enter" />
-                  <label className={styles["price"]} for="harga">
-                    IDR.34.000
-                  </label>
-                </div>
-              </div>
-              <div className={styles["box2"]}>
-                <div className={styles["square"]}>
-                  <img
-                    className={styles["img-product"]}
-                    src="./assets/veggie.png"
-                    alt="veggie"
-                  />
-                  <br />
-                  <label className={styles["name-product"]} for="name">
-                    Veggie <br className="enter" /> tomato{" "}
-                    <br className="enter" />
-                    mix
-                  </label>
-                  <br className="enter" />
-                  <label className={styles["price"]} for="harga">
-                    IDR.34.000
-                  </label>
-                </div>
-              </div>
-              <div className={styles["box3"]}>
-                <div className={styles["square"]}>
-                  <img
-                    className={styles["img-product"]}
-                    src="./assets/veggie.png"
-                    alt="veggie"
-                  />
-                  <br />
-                  <label className={styles["name-product"]} for="name">
-                    Veggie <br className="enter" /> tomato{" "}
-                    <br className="enter" />
-                    mix
-                  </label>
-                  <br className="enter" />
-                  <label className={styles["price"]} for="harga">
-                    IDR.34.000
-                  </label>
-                </div>
-              </div>
-              <div className={styles["box4"]}>
-                <div className={styles["square"]}>
-                  <img
-                    className={styles["img-product"]}
-                    src="./assets/veggie.png"
-                    alt="veggie"
-                  />
-                  <br />
-                  <label className={styles["name-product"]} for="name">
-                    Veggie <br className="enter" /> tomato{" "}
-                    <br className="enter" />
-                    mix
-                  </label>
-                  <br className="enter" />
-                  <label className={styles["price"]} for="harga">
-                    IDR.34.000
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div className={styles["column2"]}>
-              <div className={styles["box5"]}>
-                <div className={styles["square"]}>
-                  <img
-                    className={styles["img-product"]}
-                    src="./assets/veggie.png"
-                    alt="veggie"
-                  />
-                  <br />
-                  <label className={styles["name-product"]} for="name">
-                    Veggie <br className="enter" /> tomato{" "}
-                    <br className="enter" />
-                    mix
-                  </label>
-                  <br className="enter" />
-                  <label className={styles["price"]} for="harga">
-                    IDR.34.000
-                  </label>
-                </div>
-              </div>
-              <div className={styles["box6"]}>
-                <div className={styles["square"]}>
-                  <img
-                    className={styles["img-product"]}
-                    src="./assets/veggie.png"
-                    alt="veggie"
-                  />
-                  <br />
-                  <label className={styles["name-product"]} for="name">
-                    Veggie <br className="enter" /> tomato{" "}
-                    <br className="enter" />
-                    mix
-                  </label>
-                  <br className="enter" />
-                  <label className={styles["price"]} for="harga">
-                    IDR.34.000
-                  </label>
-                </div>
-              </div>
-              <div className={styles["box7"]}>
-                <div className={styles["square"]}>
-                  <img
-                    className={styles["img-product"]}
-                    src="./assets/veggie.png"
-                    alt="veggie"
-                  />
-                  <br />
-                  <label className={styles["name-product"]} for="name">
-                    Veggie <br className="enter" /> tomato{" "}
-                    <br className="enter" />
-                    mix
-                  </label>
-                  <br className="enter" />
-                  <label className={styles["price"]} for="harga">
-                    IDR.34.000
-                  </label>
-                </div>
-              </div>
-              <div className={styles["box8"]}>
-                <div className={styles["square"]}>
-                  <img
-                    className={styles["img-product"]}
-                    src="./assets/veggie.png"
-                    alt="veggie"
-                  />
-                  <br />
-                  <label className={styles["name-product"]} for="name">
-                    Veggie <br className="enter" /> tomato{" "}
-                    <br className="enter" />
-                    mix
-                  </label>
-                  <br className="enter" />
-                  <label className={styles["price"]} for="harga">
-                    IDR.34.000
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div className={styles["column3"]}>
-              <div className={styles["box9"]}>
-                <div className={styles["square"]}>
-                  <img
-                    className={styles["img-product"]}
-                    src="./assets/veggie.png"
-                    alt="veggie"
-                  />
-                  <br />
-                  <label className={styles["name-product"]} for="name">
-                    Veggie <br className="enter" /> tomato{" "}
-                    <br className="enter" />
-                    mix
-                  </label>
-                  <br className="enter" />
-                  <label className={styles["price"]} for="harga">
-                    IDR.34.000
-                  </label>
-                </div>
-              </div>
-              <div className={styles["box10"]}>
-                <div className={styles["square"]}>
-                  <img
-                    className={styles["img-product"]}
-                    src="./assets/veggie.png"
-                    alt="veggie"
-                  />
-                  <br />
-                  <label className={styles["name-product"]} for="name">
-                    Veggie <br className="enter" /> tomato{" "}
-                    <br className="enter" />
-                    mix
-                  </label>
-                  <br className="enter" />
-                  <label className={styles["price"]} for="harga">
-                    IDR.34.000
-                  </label>
-                </div>
-              </div>
-              <div className={styles["box11"]}>
-                <div className={styles["square"]}>
-                  <img
-                    className={styles["img-product"]}
-                    src="./assets/veggie.png"
-                    alt="veggie"
-                  />
-                  <br />
-                  <label className={styles["name-product"]} for="name">
-                    Veggie <br className="enter" /> tomato{" "}
-                    <br className="enter" />
-                    mix
-                  </label>
-                  <br className="enter" />
-                  <label className={styles["price"]} for="harga">
-                    IDR.34.000
-                  </label>
-                </div>
-              </div>
-              <div className={styles["box12"]}>
-                <div className={styles["square"]}>
-                  <img
-                    className={styles["img-product"]}
-                    src="./assets/veggie.png"
-                    alt="veggie"
-                  />
-                  <br />
-                  <label className={styles["name-product"]} for="name">
-                    Veggie <br className="enter" /> tomato{" "}
-                    <br className="enter" />
-                    mix
-                  </label>
-                  <br className="enter" />
-                  <label className={styles["price"]} for="harga">
-                    IDR.34.000
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div className={styles["column4"]}>
-              <div className={styles["box13"]}>
-                <div className={styles["square"]}>
-                  <img
-                    className={styles["img-product"]}
-                    src="./assets/veggie.png"
-                    alt="veggie"
-                  />
-                  <br />
-                  <label className={styles["name-product"]} for="name">
-                    Veggie <br className="enter" /> tomato{" "}
-                    <br className="enter" />
-                    mix
-                  </label>
-                  <br className="enter" />
-                  <label className={styles["price"]} for="harga">
-                    IDR.34.000
-                  </label>
-                </div>
-              </div>
-              <div className={styles["box14"]}>
-                <div className={styles["square"]}>
-                  <img
-                    className={styles["img-product"]}
-                    src="./assets/veggie.png"
-                    alt="veggie"
-                  />
-                  <br />
-                  <label className={styles["name-product"]} for="name">
-                    Veggie <br className="enter" /> tomato{" "}
-                    <br className="enter" />
-                    mix
-                  </label>
-                  <br className="enter" />
-                  <label className={styles["price"]} for="harga">
-                    IDR.34.000
-                  </label>
-                </div>
-              </div>
-              <div className={styles["box15"]}>
-                <div className={styles["square"]}>
-                  <img
-                    className={styles["img-product"]}
-                    src="./assets/veggie.png"
-                    alt="veggie"
-                  />
-                  <br />
-                  <label className={styles["name-product"]} for="name">
-                    Veggie <br className="enter" /> tomato{" "}
-                    <br className="enter" />
-                    mix
-                  </label>
-                  <br className="enter" />
-                  <label className={styles["price"]} for="harga">
-                    IDR.34.000
-                  </label>
-                </div>
-              </div>
-              <div className={styles["box16"]}>
-                <div className={styles["square"]}>
-                  <img
-                    className={styles["img-product"]}
-                    src="./assets/veggie.png"
-                    alt="veggie"
-                  />
-                  <br />
-                  <label className={styles["name-product"]} for="name">
-                    Veggie <br className="enter" /> tomato{" "}
-                    <br className="enter" />
-                    mix
-                  </label>
-                  <br className="enter" />
-                  <label className={styles["price"]} for="harga">
-                    IDR.34.000
-                  </label>
-                </div>
-              </div>
+            <div
+              className={`row ${styles["list-content"]} d-flex justify-content-start`}
+            >
+              {this.state.product.map((e, key) => (
+                <CardProduct
+                  // key={`${key}`}
+                  id={e.id}
+                  params={e.id}
+                  product_name={e.name}
+                  size={e.size}
+                  price={this.costing(e.price)}
+                  image_product={e.image}
+                />
+              ))}
             </div>
           </section>
         </main>

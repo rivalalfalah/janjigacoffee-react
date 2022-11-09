@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styles from "../styles/Home.module.css";
+
 import coffee from "../assets/images/coffee-3.png";
 import checklist1 from "../assets/images/checklist.png";
 import image from "../assets/images/bgh.png";
@@ -21,45 +22,29 @@ class Home extends Component {
   render() {
     return (
       <>
-        <header className={styles["header1"]}>
-          <nav className={styles["nav"]}>
+        <header className={styles["header"]}>
+          <section className={styles["header-left"]}>
             <span className={styles["tittle-web"]}>
-              <Link to="/">
-                <img src={coffee} alt="coffee" />
-              </Link>
-              <label for="tittle" className={styles["font"]}>
+              <img
+                className={`${styles["coffee-img"]} ${styles["header-coffee"]} `}
+                src={coffee}
+                alt="coffee"
+              />
+              <label
+                className={`${styles["coffee-shop"]} ${styles["text-coffee"]} `}
+                for="tittle"
+              >
                 Coffee Shop
               </label>
             </span>
-            <span className={styles["nav-rev"]}>
-              <Link
-                to="/home"
-                className={`${styles["font"]} ${styles["url"]} ${styles["home-url"]}`}
-              >
-                Home
-              </Link>
-              <Link
-                to="/product"
-                className={`${styles["font"]} ${styles["url"]}`}
-              >
-                Product
-              </Link>
-              <span className={`${styles["font"]} ${styles["url"]}`}>
-                Your chart
-              </span>
-              <span className={`${styles["font"]} ${styles["url"]}`}>
-                History
-              </span>
-            </span>
-            <span className={styles["author-button"]}>
-              <Link to="login">
-                <button className={styles["login"]}>Login</button>
-              </Link>
-              <Link to="sign-up">
-                <button className={styles["sign-in"]}>Sign In</button>
-              </Link>
-            </span>
-          </nav>
+          </section>
+          <section className={styles["header-middle"]}>
+                <Link to="/" className={styles["home"]}>Home</Link>
+                <Link to="/product" className={styles["product"]}>Product</Link>
+              <span className={styles["your-cart"]}>Your cart</span>
+              <span className={styles["history"]}>History</span>
+          </section>
+          <section className={styles["header-right"]}></section>
         </header>
         <main className={styles["main"]}>
           <section className={styles["top"]}>

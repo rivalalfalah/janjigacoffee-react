@@ -40,13 +40,13 @@ function Login() {
       })
       .then((response) => {
         //("Login Success");
-         console.log(response.data);
         localStorage.setItem(
           "token",
           JSON.stringify(response.data.data.token)
         );
         localStorage.setItem("user_id",JSON.stringify(response.data.data.payLoad.user_id));
         localStorage.setItem("role_id",JSON.stringify(response.data.data.payLoad.role_id));
+        console.log(typeof(localStorage.user_id))
         navigate("/");
       })
       .catch((err) => {

@@ -14,8 +14,7 @@ import coffee from "../assets/images/coffee-3.png"
             alt="coffee"
           />
           <label className={`${styles["coffee-shop"]} ${styles["text-coffee"]} `} for="tittle"
-            >Coffee Shop</label
-          >
+            >Coffee Shop</label>
         </span>
       </section>
       <section className={styles["header-middle"]}>

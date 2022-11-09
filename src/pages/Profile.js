@@ -1,33 +1,35 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styles from "../styles/Profile.module.css";
+import coffee from "../assets/images/coffee-3.png"
 
 class Profile extends Component {
   render() {
     return (
       <>
         <header className={styles["header"]}>
-          <nav className={styles["nav"]}>
-            <span className={styles["tittle-web"]}>
-              <img src="./assets/coffee 3.png" alt="coffee" />
-              <label for="tittle" className={styles["font"]}>
-                Coffee Shop
-              </label>
-            </span>
-
-            <span className={styles["nav-rev"]}>
-              <Link to="/"><span className={`${styles["font"]} ${styles["url"]}`}>Home</span></Link>
-              <Link to="/product"><span className={`${styles["font"]} ${styles["url"]}`}>Product</span></Link>
-              <span className={`${styles["font"]} ${styles["url"]}`}>Your chart</span>
-              <span className={`${styles["font"]} ${styles["url"]}`}>History</span>
-            </span>
-            <span className={styles["profile-pict"]}>
-              <button className={styles["search"]}></button>
-              <button className={styles["chat"]}></button>
-              <img src="./assets/image 39.jpg" alt="profile-pict" />
-            </span>
-          </nav>
-        </header>
+      <section className={styles["header-left"]}>
+        <span className={styles["tittle-web"]}>
+          <img
+            className={`${styles["coffee-img"]} ${styles["header-coffee"]} `}
+            src={coffee}
+            alt="coffee"
+          />
+          <label className={`${styles["coffee-shop"]} ${styles["text-coffee"]} `} for="tittle"
+            >Coffee Shop</label
+          >
+        </span>
+      </section>
+      <section className={styles["header-middle"]}>
+        <nav className={styles["nav-header"]}>
+          <Link to="/"><span className={styles["home"]}>Home</span></Link>
+          <Link to="/product"><span className={styles["product"]}>Product</span></Link>
+          <span className={styles["your-cart"]}>Your cart</span>
+          <span className={styles["history"]}>History</span>
+        </nav>
+      </section>
+      <section className={styles["header-right"]}></section>
+    </header>
         <main className={styles["main"]}>
           <section className={styles["user-change"]}>
             <div

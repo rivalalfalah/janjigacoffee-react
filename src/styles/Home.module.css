@@ -12,90 +12,108 @@
     src: url(../assets/fonts/Poppins-Bold.otf);
 }
 
-.header1 {
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    height: 15%;
-    width: 100%;
+.header {
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-bottom-style: solid;
+    border-width: thin;
+    border-color: #9F9F9F;
 }
 
-.nav {
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-    height: auto;
+.header-left {
+    display: flex;
+    flex: 1;
+}
+
+.header-middle {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    font-size: x-large;
+}
+
+.header-right {
+    display: flex;
+    flex:1
+}
+
+.coffee-img {
+    display: flex;
+    cursor: pointer;
 }
 
 .tittle-web {
-    position: absolute;
-    left: 15%;
-}
-.home-url {
-    color: #6A4029 !important;
-    font-size: xx-large;
-}
-.nav-rev{
-    position: absolute;
-    left: 30%;
-    width: 40%;
-    font-size: x-large;
-}
-.author-button {
-    position: absolute;
-    left: 80%;
-    width: 20%;
+    display: flex;
+    width: 100%;
 }
 
-.font {
+.header-coffee {
+    width: 15%;
+    height:70%;
+}
+
+.text-coffee {
+    font-family: "rubik" ;
+    font-size:xx-large;
+}
+
+.coffee-shop {
+display: flex;
+padding-left: 5%;
+padding-top: 3%;
+}
+
+.nav-header {
+display: flex;
+}
+
+.home {
+    display: flex;
+    padding-top: 5%;
     font-family: "rubik";
-}
-
-.font.url {
-    color: grey;
-    text-decoration: none;
-    margin-left: 5%;
-}
-
-.login {
-    position: absolute;
-    color: black;
-    background-color: white;
-    border: none;
-    width: 10%;
-    left: 0%;
-    font-family: "rubik";
+    color: #4F5665;
     cursor: pointer;
 }
 
-.sign-in {
-    position: absolute;
+.product {
+    display: flex;
+    padding-top: 5%;
+    top: 50%;
     left: 40%;
-    background-color: #FFBA33 ;
-    color: #6A4029;
-    width: 7vw;
-    height: 4vh;
-    border-radius: 10%;
-    border: none;
     font-family: "rubik";
+    color: #6A4029;
+    cursor: pointer;
+}
+
+.your-cart {
+    display: flex;
+    padding-top: 5%;
+    top: 50%;
+    left: 50%;
+    font-family: "rubik";
+    color: #4F5665;
+    cursor: pointer;
+}
+
+.history {
+    display: flex;
+    padding-top: 5%;
+    top: 50%;
+    left: 62%;
+    font-family: "rubik";
+    color: #4F5665;
     cursor: pointer;
 }
 .main {
-    position: absolute;
-    top: 20%;
-    left: 0%;
-    width: 100%;
-    height: 500%;
+    position: relative;
 }
 section.top {
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height : 40%
+    display: flex;
 }
 .background {
-    position: absolute;
     left: 0%;
     width: 100%;
     height: 40%;
@@ -106,7 +124,7 @@ section.top {
 
 .start-your-text {
     color: white;
-    position: absolute;
+    ;
     left: 8%;
     top:0%;
     font-family: "rubik";
@@ -116,7 +134,6 @@ section.top {
 
 .detail-top {
     color: white;
-    position: absolute;
     left: 8%;
     top:30%;
     font-family: "rubik";
@@ -129,7 +146,6 @@ br.top {
 }
 
 .get-started {
-    position: absolute;
     top: 60%;
     left: 8%;
     color: #6A4029;
@@ -145,7 +161,6 @@ br.top {
 
 
 .middle {
-    position: absolute;
     top: 15%;
     left: 0%;
     width: 100%;
@@ -154,7 +169,6 @@ br.top {
 }
 
  .box1 {
-    position: absolute;
     top:80%;
     left:15%;
     width: 70%;
@@ -163,13 +177,11 @@ br.top {
 }
 
 .image-top {
-    position: absolute;
     top: 20%;
     left:3%;
 }
 
 .side-image {
-    position: absolute;
     top: 30%;
     right:15%
 }
@@ -198,7 +210,6 @@ br.enter2 {
 }
 
 div.checklist {
-    position: absolute;
     top: 55%;
     right: 12%;
 }
@@ -207,7 +218,6 @@ div.checklist {
 }
 
 .here-is-text {
-    position: absolute;
     display: block;
     top : 100%;
     left: 35%;
@@ -219,14 +229,10 @@ div.checklist {
     font-size: x-large;
 }
 .product-favorite {
-    position: absolute;
-    top: 45%;
-    width: 100%;
-    height: 10%;
+    display: flex;
 }
 
 .favorite-product-center {
-    position: absolute;
     top: 0%;
     left:40%;
     width: auto;
@@ -235,7 +241,6 @@ div.checklist {
 }
 
 .block1 {
-    position: absolute;
     left: 5%;
     border-style: solid;
     height: 100%;
@@ -245,7 +250,6 @@ div.checklist {
 }
 
 .block2 {
-    position: absolute;
     left: 35%;
     border-style: solid;
     height: 100%;
@@ -255,7 +259,6 @@ div.checklist {
 }
 
 .block3 {
-    position: absolute;
     top: 0%;
     right: 15%;
     border-style: solid;
@@ -267,14 +270,12 @@ div.checklist {
 }
 
 .bottom {
-    position: absolute;
     top : 58%;
     width: 100%;
     height: 20%;
 }
 
 .bottom-top {
-    position: absolute;
     left: 40%;
     display: block;
     text-align: center;
@@ -292,7 +293,6 @@ div.checklist {
 }
 
 .maps {
-    position: absolute;
     top: 20%;
     left: 20%;
 }
@@ -304,7 +304,6 @@ div.checklist {
 }
 
 .text-our-partner {
-    position: absolute;
     top: 100%;
     left: 50%;
 }
@@ -316,7 +315,6 @@ div.checklist {
 }
 
 .all-partner-img {
-    position: absolute;
     left: 0%;
     top: 130%;
     width: 100%;
@@ -324,7 +322,6 @@ div.checklist {
 }
 
 .last-content {
-    position: absolute;
     top:90%;
     left: 0%;
     width: 100%;
@@ -332,7 +329,6 @@ div.checklist {
 }
 
 .loved-by-text{
-    position: absolute;
     left: 35%;
     display: block;
     text-align: center;
@@ -350,7 +346,7 @@ div.checklist {
 }
 
 .footer {
-    position: absolute;
+    display: flex;
     left: 0%;
     top:565%;
     width: 100%;
@@ -369,7 +365,6 @@ div.checklist {
 }
 
 .footer-right {
-    position: absolute;
     left: 50%;
     top: 0%;
     width: 50%;
@@ -377,18 +372,15 @@ div.checklist {
 }
 
 .footer-engage {
-    position: absolute;
     top: 20%;
     right: 25%;
 }
 .footer-product {
- position: absolute;
  left: 0%;
  top: 20%
 }
 
 .footer-left {
-    position: absolute;
     top: 0%;
     left: 0%;
     width: 50%;
@@ -396,7 +388,6 @@ div.checklist {
 }
 
 .profile-picture {
-    position: absolute;
     left: 5%;
     top: 5%;
     width: 15%;
@@ -451,20 +442,17 @@ div.checklist {
 }
 
 .img-block{
-    position: absolute;
     top: -20%;
     left: 25%;
     border-radius: 500%;
 }
 
 .name-favorite-product {
-    position: absolute;
     font-family: "rubik";
     top: 20%;
     left : 30%
 }
 div.checklist-last {
-    position: absolute;
     top:30%;
     left: 10%;
     width: 120%;
@@ -472,14 +460,14 @@ div.checklist-last {
 }
 
 div.comment {
-    position: absolute;
+    
     top: 30%;
     width: 100%;
     height: 30%;
 }
 
 .square1 {
-    position: absolute;
+    
     top: 0%;
     left: 0%;
     width: 25%;
@@ -493,7 +481,7 @@ div.comment {
 }
 
 .square2 {
-    position: absolute;
+    
     top: 0%;
     left: 30%;
     width: 25%;
@@ -507,7 +495,7 @@ div.comment {
 
 }
 .square3 {
-    position: absolute;
+    
     top: 0%;
     left: 60%;
     width: 25%;
@@ -520,14 +508,14 @@ div.comment {
     border-color: #6A4029;
 }
 .profile-comment {
-    position: absolute;
+    
     top: 10%;
     left:10%;
     font-family: "rubik";
 }
 
 .comment-section {
-    position: absolute;
+    
     top: 40%;
     left:5%;
     font-family: "rubik";
@@ -538,7 +526,7 @@ div.comment {
 }
 
 .button-cursor {
-    position: absolute;
+    
     top: 65%;
     left:80%;
     height: 8%;
@@ -546,7 +534,7 @@ div.comment {
 }
 
 .next{
-    position: absolute;
+    
     left: 50%;
     width: 50%;
     height: 100%;
@@ -557,7 +545,7 @@ div.comment {
 }
 
 .img-next {
-    position: absolute;
+    
     left: 65%;
     top:40%;
     width: 25%;
@@ -566,7 +554,7 @@ div.comment {
 }
 
 .previous{
-    position: absolute;
+    
     left: 0%;
     width: 50%;
     height: 100%;
@@ -576,7 +564,7 @@ div.comment {
     cursor: pointer;
 }
 .img-previous {
-    position: absolute;
+    
     left: 10%;
     top:40%;
     width: 25%;
@@ -584,21 +572,21 @@ div.comment {
     cursor: pointer;
 }
 .opening {
-    position: absolute;
+    
     top:5%;
     width : 50%;
     height: 50%;
 }
 
 .price {
-    position: absolute;
+    
     top: 70%;
     left: 30%;
     font-family: "rubik";
 }
 
 .buy {
-    position: absolute;
+    
     width: 12vw;
     height: 5vh;
     bottom: 5%;
@@ -630,13 +618,13 @@ div.comment {
 }
 
 .button3{
-    position: absolute;
+    
     top:65% ;
     left : 10%
 }
 
 .checkpromo {
-    position: absolute ;
+     
     top: -15%;
     left: 15%;
     height: 30%;
@@ -648,7 +636,7 @@ div.comment {
 }
 
 .img-footer {
-    position: absolute;
+    
     top : 20%;
     left: 20%;
 }
@@ -660,7 +648,7 @@ div.comment {
 }
 
 .btn-footer {
-    position: absolute;
+    
     top : 40%;
     left: 20%;
 }
@@ -670,13 +658,13 @@ div.comment {
 }
 
 .checkpromo-text {
-    position: absolute;
+    
     top: 30%;
     left: 5%;
     font-family: "rubik";
 }
 .see-promo {
-    position: absolute;
+    
     top: 30%;
     left: 60%;
     width: 30%;
@@ -689,7 +677,7 @@ div.comment {
 }
 
 .box1-1 {
-    position: absolute;
+    
     height: 100%;
     width: 30%;
     border-right-style: solid;
@@ -697,7 +685,7 @@ div.comment {
 }
 
 .box1-2 {
-    position: absolute;
+    
     height: 100%;
     width: 30%;
     left: 40%;
@@ -706,14 +694,14 @@ div.comment {
 }
 
 .box1-3 {
-    position: absolute;
+    
     height: 100%;
     width: 30%;
     left : 70%
 }
 
 .img-loc {
-    position: absolute;
+    
     top: 47%;
     left:30%;
     width: 15%;
@@ -735,21 +723,21 @@ div.comment {
 }
 
 .center-img {
-    position: absolute;
+    
     top: 30%;
     left: 40%;
     cursor: pointer;
 }
 
 .center-love {
-    position: absolute;
+    
     top: 30%;
     left: 25%;
     cursor: pointer;
 }
 
 .upto {
-    position: absolute;
+    
     top : 50%;
     left: 50%;
     font-family: "rubik";
@@ -757,7 +745,7 @@ div.comment {
 }
 
 .stores {
-    position: absolute;
+    
     top: 60%;
     left: 48%;
     font-family: "rubik";

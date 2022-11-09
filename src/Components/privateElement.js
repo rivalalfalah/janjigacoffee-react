@@ -8,8 +8,7 @@ class PrivateElement extends React.Component {
     // jika false, maka redirect
     // kondisi 1 = apakah sudah login
     const { allowedRoles = [], children } = this.props;
-    const userInfo = JSON.parse(localStorage.token || "");
-    if (!userInfo)
+    if (!localStorage.token)
       return (
         <Navigate
           to="/login"
@@ -19,7 +18,7 @@ class PrivateElement extends React.Component {
       );
     // kondisi 2 = apakah sesuai dengan role
     if (allowedRoles.length > 0)
-      if (!allowedRoles.includes(userInfo.role_id))
+      if (!allowedRoles.includes(JSON.parse(localStorage.role_id)))
         return (
           <Navigate
             to="/"

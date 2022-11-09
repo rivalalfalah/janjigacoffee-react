@@ -1,20 +1,18 @@
 import actionStrings from "../actions/actionString.js";
  
-
-if (!localStorage.token) {
-  const isLogin = false
-  return isLogin 
-};
-
-const isLoginReducer = (prevState = isLogin.intialState, action) => {
+const token = localStorage.getItem("token")
+const initialState = {
+  isLogin:  !token ? false : true
+}
+const isLoginReducer = (prevState = initialState, action) => {
   switch (action.type) {
     case actionStrings.Login:
       return {
-        prevState: true,
+        isLogin: true,
       };
     case actionStrings.LogOut:
       return {
-        prevState: false,
+        isLogin: false,
       };
       default : return prevState
   }

@@ -21,7 +21,8 @@ class Product extends Component {
     axios
       .get(this.state.favorite)
       .then((res) => {
-        this.setState({ product: res.data.result.data });
+        console.log(res.data)
+        this.setState({ product: res.data.result });
       })
       .catch((err) => console.log(err));
   }
@@ -68,6 +69,7 @@ class Product extends Component {
       .catch((err) => console.log(err));
   };
   render() {
+    console.log(this.state.product)
     return (
       <>
         <header className={styles["header1"]}>

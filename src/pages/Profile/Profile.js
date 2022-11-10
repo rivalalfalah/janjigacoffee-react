@@ -1,35 +1,15 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import styles from "../styles/Profile.module.css";
-import coffee from "../assets/images/coffee-3.png"
+import axios from "axios";
+import styles from "./Profile.module.css";
+
+import Navbar from "../../Components/Navbar"
+
 
 class Profile extends Component {
   render() {
     return (
       <>
-        <header className={styles["header"]}>
-      <section className={styles["header-left"]}>
-        <span className={styles["tittle-web"]}>
-          <img
-            className={`${styles["coffee-img"]} ${styles["header-coffee"]} `}
-            src={coffee}
-            alt="coffee"
-          />
-          <label className={`${styles["coffee-shop"]} ${styles["text-coffee"]} `} for="tittle"
-            >Coffee Shop</label
-          >
-        </span>
-      </section>
-      <section className={styles["header-middle"]}>
-        <nav className={styles["nav-header"]}>
-          <Link to="/"><span className={styles["home"]}>Home</span></Link>
-          <Link to="/product"><span className={styles["product"]}>Product</span></Link>
-          <span className={styles["your-cart"]}>Your cart</span>
-          <span className={styles["history"]}>History</span>
-        </nav>
-      </section>
-      <section className={styles["header-right"]}></section>
-    </header>
+        <Navbar />
         <main className={styles["main"]}>
           <section className={styles["user-change"]}>
             <div
@@ -152,7 +132,7 @@ class Profile extends Component {
                 type="text"
                 name="display-name"
               />
-              <input className={styles["input"]} type="text" name="birth" />
+              <input className={styles["input"]} type="date" name="birth" />
               <br />
               <label className={styles["font"]} for="first-name">
                 First name

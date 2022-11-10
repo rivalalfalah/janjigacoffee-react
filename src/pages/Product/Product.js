@@ -1,18 +1,19 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import styles from "../styles/Product.module.css";
-import coffee from "../assets/images/coffee-3.png";
-import CardProduct from "../Components/CardProduct";
+import styles from "./Product.module.css";
+
+import Navbar from "../../Components/Navbar"
+
+import CardProduct from "../../Components/CardProduct";
 import axios from "axios";
 class Product extends Component {
   // State awal
   state = {
     product: [],
-    favorite: `${process.env.REACT_APP_BACKEND_HOST}api/products/?sorting=favorite&page=1&limit=12`,
-    coffee: `${process.env.REACT_APP_BACKEND_HOST}api/products/?category=coffee&page=1&limit=12`,
-    non_coffee: `${process.env.REACT_APP_BACKEND_HOST}api/products/?category=non_coffee&page=1&limit=12`,
-    food: `${process.env.REACT_APP_BACKEND_HOST}api/products/?category=foods&page=1&limit=12`,
-    addons: `${process.env.REACT_APP_BACKEND_HOST}api/products/?category=addon&page=1&limit=12`,
+    favorite: `${process.env.REACT_APP_BACKEND_HOST}api/products/?sorting=favorit&page=1&limit=12`,
+    coffee: `${process.env.REACT_APP_BACKEND_HOST}api/products/?category=1&page=1&limit=12`,
+    non_coffee: `${process.env.REACT_APP_BACKEND_HOST}api/products/?category=2&page=1&limit=12`,
+    food: `${process.env.REACT_APP_BACKEND_HOST}api/products/?category=3&page=1&limit=12`,
+    addons: `${process.env.REACT_APP_BACKEND_HOST}api/products/?category=4&page=1&limit=12`,
     searchParams: {},
   };
 
@@ -72,41 +73,7 @@ class Product extends Component {
     console.log(this.state.product)
     return (
       <>
-        <header className={styles["header1"]}>
-          <nav className={styles["header"]}>
-            <span className={styles["tittle-web"]}>
-              <Link to="/">
-                <img src={coffee} alt="coffee" />
-              </Link>
-              <label for="tittle" className={styles["font"]}>
-                Coffee Shop
-              </label>
-            </span>
-
-            <span className={styles["nav-rev"]}>
-              <Link to="/" className={`${styles["font"]} ${styles["url"]}`}>
-                Home
-              </Link>
-              <Link
-                to="/product"
-                className={`${styles["font"]} ${styles["url"]} ${styles["product-url"]}`}
-              >
-                Product
-              </Link>
-              <span className={`${styles["font"]} ${styles["url"]}`}>
-                Your chart
-              </span>
-              <span className={`${styles["font"]} ${styles["url"]}`}>
-                History
-              </span>
-            </span>
-            <span className={styles["profile-pict"]}>
-              <button className={styles["search"]}></button>
-              <button className={styles["chat"]}></button>
-              <button className={styles["profile-pict-header"]}></button>
-            </span>
-          </nav>
-        </header>
+        <Navbar />
         <aside className={styles["aside"]}>
           <label
             className={`${styles["promo-for-text"]} ${styles["font"]} `}
@@ -270,108 +237,6 @@ class Product extends Component {
             </div>
           </section>
         </main>
-        <footer className={styles["footer"]}>
-          <section className={styles["footer-left"]}>
-            <img src="./assets/coffee 3.png" alt="coffee" />
-            <label className={styles["font"]} for="image">
-              Coffee Shop
-            </label>
-            <br />
-            <label className={styles["font"]} for="detail-footer">
-              Coffee Shop is a store that sells some good <br />
-              meals, and especially coffee. We provide <br />
-              high quality beans
-            </label>
-            <br />
-            <button className={styles["instagram"]}></button>
-            <button className={styles["twitter"]}></button>
-            <button className={styles["facebook"]}></button>
-          </section>
-          <section className={styles["footer-right"]}>
-            <div className={styles["footer-product"]}>
-              <label
-                className={`${styles["font"]} ${styles["product"]} `}
-                for="footer-product"
-              >
-                Product
-              </label>
-              <br />
-              <div
-                className={`${styles["font"]} ${styles["footer-url"]} `}
-                href=""
-              >
-                Download
-              </div>
-              <br />
-              <div
-                className={`${styles["font"]} ${styles["footer-url"]} `}
-                href=""
-              >
-                Pricing
-              </div>
-              <br />
-              <div
-                className={`${styles["font"]} ${styles["footer-url"]} `}
-                href=""
-              >
-                Location
-              </div>
-              <br />
-              <div
-                className={`${styles["font"]} ${styles["footer-url"]} `}
-                href=""
-              >
-                Countries
-              </div>
-              <br />
-              <div
-                className={`${styles["font"]} ${styles["footer-url"]} `}
-                href=""
-              >
-                Blog
-              </div>
-            </div>
-            <div className={styles["footer-engage"]}>
-              <label
-                className={`${styles["font"]} ${styles["engage"]} `}
-                for="engage"
-              >
-                Engage
-              </label>
-              <br />
-              <div
-                className={`${styles["font"]} ${styles["footer-url"]} `}
-                href=""
-              >
-                Coffee shop ?
-              </div>
-              <br />
-              <div
-                className={`${styles["font"]} ${styles["footer-url"]} `}
-                href=""
-              >
-                FAQ
-              </div>
-              <br />
-              <div
-                className={`${styles["font"]} ${styles["footer-url"]} `}
-                href=""
-              >
-                About Us
-              </div>
-              <br />
-              <div
-                className={`${styles["font"]} ${styles["footer-url"]} `}
-                href=""
-              >
-                Privacy Policy
-              </div>
-              <br />
-              <div>Terms of Service</div>
-              <br />
-            </div>
-          </section>
-        </footer>
       </>
     );
   }

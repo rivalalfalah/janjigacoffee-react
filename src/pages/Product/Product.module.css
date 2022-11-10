@@ -1,169 +1,26 @@
 @font-face {
     font-family: "rubik";
-    src: url(../assets/fonts/Rubik-Bold.ttf);
+    src: url(../../assets/fonts/Rubik-Bold.ttf);
 }
 @font-face {
     font-family: "poppinsL";
-    src: url(../assets/fonts/Poppins-Light.otf);
+    src: url(../../assets/fonts/Poppins-Light.otf);
 }
 
 @font-face {
     font-family: "poppinsB";
-    src: url(../assets/fonts/Poppins-Bold.otf);
+    src: url(../../assets/fonts/Poppins-Bold.otf);
 }
 
-.header1 {
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    height: 10%;
-    width: 100%;
-}
-
-nav.header {
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-    height: auto;
-}
-
-.tittle-web {
-    position: absolute;
-    left: 15%;
-}
-
-.nav-rev{
-    position: absolute;
-    left: 30%;
-    width: 50%;
-    font-size: x-large;
-}
-.product-url {
-    color: #6A4029 !important;
-}
-.profile-pict {
-    position: absolute;
-    left:80%;
-    width: 30%;
-    height: 20%;
-}
 .favorite-product-url {
     color: #6A4029 !important;
     text-decoration: underline !important;
     font-size: larger !important;
 }
-.footer {
-    position: absolute;
-    left: 0%;
-    top: 150%;
-    height: 50%;
-    width: 100%;
-    background-color: #F8F8F8;
-}
-
-.font {
-    font-family: "rubik";
-}
-
-.font.url {
-    color: grey;
-    text-decoration: none;
-    margin-left: 5%;
-}
-
-.footer-right {
-    position: absolute;
-    right: 0%;
-    top: 15%;
-    width: 50%;
-    height: auto;
-}
-
-.footer-engage {
-    position: absolute;
-    right: 25%;
-}
-.footer-product {
- position: absolute;
- left: 20%;
-}
-
-.footer-left {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-}
-
-br {
-    content: "";
-    display: block;
-    margin-bottom: 5%;
-}
-
-.footer-url{
-    text-decoration: none;
-    color: #4F5665;
-    font-size: large;
-    display: block;
-    margin-bottom: 30%;
-}
-
-.engage{
-    display: block;
-    margin-bottom: 10%;
-    font-size: x-large;
-}
-
-.product{
-    display: block;
-    margin-bottom: 10%;
-    font-size: x-large;
-}
-
-.facebook {
-    background-color: #FFBA33;
-    background: url(../assets/images/facebook.png);
-    width: 30px;
-    height: 30px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: #FFBA33;
-    color: #6A4029;
-    border-radius: 1000px;
-    cursor: pointer;
-}
-
-.twitter {
-    background-color: #FFBA33;
-    background: url(../assets/images/twitter.png);
-    width: 30px;
-    height: 30px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: #FFBA33;
-    color: #6A4029;
-    border-radius: 1000px;
-    cursor: pointer;
-
-}
-
-.instagram {
-    background-color: #FFBA33;
-    background: url(../assets/images/instagram.png);
-    width: 30px;
-    height: 30px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: #FFBA33;
-    color: #6A4029;
-    border-radius: 1000px;
-    cursor: pointer;
-}
-
 .aside{
     position: absolute;
     left: 0%;
-    top : 15%;
+    top : 11.4%;
     width: 35%;
     height : 135%;
     border-top-style:solid;
@@ -173,7 +30,7 @@ br {
 
 .main1 {
     position: absolute;
-    top: 15%;
+    top: 11.4%;
     right: 0%;
     width : 65%;
     height: 135%;
@@ -181,6 +38,7 @@ br {
     border-left-style: solid ;
     border-color: #9F9F9F;
     border-width: thin;
+    display: flex;;
 }
 
 .block1 {
@@ -543,20 +401,20 @@ section.product-box{
 .search {
     width: 2vw;
     height:4vh;
-    background-image:url(../assets/images/search.png);
+    background-image:url(../../assets/images/search.png);
     cursor: pointer;
 }
 .chat {
     width: 2vw;
     height: 4vh;
-    background-image: url(../assets/images/chat.png);
+    background-image: url(../../assets/images/chat.png);
     background-repeat: no-repeat;
     cursor: pointer;
 }
 
 .profile-pict-header {
     border-radius: 500%;
-    background-image: url(../assets/images/profil.jpg);
+    background-image: url(../../assets/images/profil.jpg);
     width: 1.5vw;
     height: 3vh;
     background-repeat: no-repeat;

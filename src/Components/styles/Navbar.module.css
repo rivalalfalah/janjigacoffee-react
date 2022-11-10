@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "rubik";
+    src: url(../../assets/fonts/Rubik-Bold.ttf);
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 5% 2% 5%;
+}
+
+.middle-header {
+    display: flex;
+    left: 30%;
+    justify-content: space-between;
+    width: 30%;
+    flex: 1;
+}
+
+.left-header {
+    display: flex;
+    flex: 1;
+}
+.url {
+    font-family: "rubik";
+    color: #4F5665;
+    text-decoration: none;
+    font-size: larger;
+}
+.url:hover {
+    color: #6A4029;
+}
+.right-header {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+.coffee-text {
+    display: flex;
+    font-family: "rubik";
+    font-size: xx-large;
+    margin-left: 5%;
+}
+
+.login-box {
+    width:25%;
+    margin-right: 5%;
+    text-align: center;
+    border-radius: 50px;
+    text-decoration: none;
+}
+.login-text {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-family: "rubik";
+    font-size: larger;
+    text-decoration: none;
+    padding-top: 5%;
+}
+.signup-box {
+    width: 25%;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #FFBA33;
+    text-decoration: none;
+}
+
+.login-text:hover {
+    color: #6A4029;
+}

@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import "./Home2.css"
 import "bootstrap/dist/css/bootstrap.css"
+
+import Navbar from "../../Components/Navbar"
+
 import checklist1 from "../../assets/images/checklist.png";
 import image from "../../assets/images/bgh.png";
 import checklist2 from "../../assets/images/checklist2.png";
@@ -25,6 +28,7 @@ import location from "../../assets/images/location.png"
     render() {
         return (
             <div>
+                <Navbar />
                 <main>
                     <div className="row custom-banner">
                         <div className="col custom-banner-left">

@@ -1,10 +1,10 @@
 @font-face {
     font-family: "rubik";
-    src: url(../assets/fonts/Rubik-Bold.ttf);
+    src: url(../../assets/fonts/Rubik-Bold.ttf);
 }
 @font-face {
     font-family: "poppins";
-    src: url(../assets/fonts/Poppins-Bold.otf);
+    src: url(../../assets/fonts/Poppins-Bold.otf);
 }
 .aside {
     position: absolute;
@@ -47,7 +47,7 @@
     height: 7vh;
     width: 20vw;
     font-family: "poppins";
-    background: url("../assets/images/google-logo.png");
+    background: url("../../assets/images/google-logo.png");
     background-position: 73px 10px;
     background-repeat: no-repeat;
     padding-top: 10px;
@@ -122,7 +122,7 @@ main section.register-form{
 
 .facebook {
     background-color: #FFBA33;
-    background: url(../assets/images/facebook.png);
+    background: url(../../assets/images/facebook.png);
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
@@ -135,7 +135,7 @@ main section.register-form{
 
 .twitter {
     background-color: #FFBA33;
-    background: url(../assets/images/twitter.png);
+    background: url(../../assets/images/twitter.png);
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
@@ -148,7 +148,7 @@ main section.register-form{
 
 .instagram {
     background-color: #FFBA33;
-    background: url(../assets/images/instagram.png);
+    background: url(../../assets/images/instagram.png);
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;

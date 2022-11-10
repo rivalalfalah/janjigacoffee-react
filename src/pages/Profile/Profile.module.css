@@ -1,17 +1,17 @@
 @font-face {
     font-family: "rubik";
-    src: url(../assets/fonts/Rubik-Bold.ttf);
+    src: url(../../assets/fonts/Rubik-Bold.ttf);
 }
 @font-face {
     font-family: "poppins";
-    src: url(../assets/fonts/Poppins-Bold.otf);
+    src: url(../../assets/fonts/Poppins-Bold.otf);
 }
 
 .change-btn {
     position: absolute;
     left: 100%;
     background-color: #6A4029;
-    background-image: url(../assets/images/edit.png);
+    background-image: url(../../assets/images/edit.png);
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
@@ -23,7 +23,7 @@
 
 .facebook {
     background-color: #FFBA33;
-    background: url(../assets/images/facebook.png);
+    background: url(../../assets/images/facebook.png);
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
@@ -35,7 +35,7 @@
 
 .twitter {
     background-color: #FFBA33;
-    background: url(../assets/images/twitter.png);
+    background: url(../../assets/images/twitter.png);
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
@@ -48,7 +48,7 @@
 
 .instagram {
     background-color: #FFBA33;
-    background: url(../assets/images/instagram.png);
+    background: url(../../assets/images/instagram.png);
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
@@ -92,7 +92,7 @@
     top: 15%;
     height: 115%;
     width: 100%;
-    background-image: url(../assets/images/bgprofile.jpg);
+    background-image: url(../../assets/images/bgprofile.jpg);
     background-size:cover;
     background-repeat: no-repeat;
 }
@@ -279,13 +279,13 @@ section.profile-form {
 .search {
     width: 2vw;
     height:4vh;
-    background-image:url(../assets/images/search.png);
+    background-image:url(../../assets/images/search.png);
     cursor: pointer;
 }
 .chat {
     width: 2vw;
     height: 4vh;
-    background-image: url(../assets/images/chat.png);
+    background-image: url(../../assets/images/chat.png);
     background-repeat: no-repeat;
     cursor: pointer;
 }

@@ -1,26 +1,26 @@
 @font-face {
     font-family: "rubik";
-    src: url(../assets/fonts/Rubik-Bold.ttf);
+    src: url(../../assets/fonts/Rubik-Bold.ttf);
 }
 @font-face {
     font-family: "rubikB";
-    src: url(../assets/fonts/Rubik-Black.ttf);
+    src: url(../../assets/fonts/Rubik-Black.ttf);
 }
 @font-face {
     font-family: "rubikS";
-    src: url(../assets/fonts/Rubik-Light.ttf);
+    src: url(../../assets/fonts/Rubik-Light.ttf);
 }
 @font-face {
     font-family: "poppinsL";
-    src: url(../assets/fonts/Poppins-Light.otf);
+    src: url(../../assets/fonts/Poppins-Light.otf);
 }
 @font-face {
     font-family: "poppinsB";
-    src: url(../assets/fonts/Poppins-ExtraBold.otf);
+    src: url(../../assets/fonts/Poppins-ExtraBold.otf);
 }
 @font-face {
     font-family: "poppinsS";
-    src: url(../assets/fonts/Poppins-Thin.otf);
+    src: url(../../assets/fonts/Poppins-Thin.otf);
 }
 .header {
     position: absolute;

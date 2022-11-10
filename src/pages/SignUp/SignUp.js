@@ -1,10 +1,10 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-import styles from "../styles/Sign-up.module.css"
-import bg from "../assets/images/robert.jpg"
-import coffee from "../assets/images/coffee-3.png"
+import styles from "./Sign-up.module.css"
+import bg from "../../assets/images/robert.jpg"
+import coffee from "../../assets/images/coffee-3.png"
 import { useNavigate } from "react-router-dom";
-import withNavigate from "../helpers/WithNavigate";
+import withNavigate from "../../helpers/WithNavigate";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 

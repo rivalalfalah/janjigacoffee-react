@@ -1,13 +1,13 @@
 import React from "react";
-import styles from "../styles/Login.module.css";
+import styles from "./Login.module.css";
 import { Link } from "react-router-dom";
 
-import coffee from "../assets/images/coffee-3.png";
-import robert from "../assets/images/robert.jpg";
+import coffee from "../../assets/images/coffee-3.png";
+import robert from "../../assets/images/robert.jpg";
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import withNavigate from "../helpers/WithNavigate";
+import withNavigate from "../../helpers/WithNavigate";
 import axios from "axios";
 
 function Login() {

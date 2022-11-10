@@ -1,32 +1,14 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import styles from "../styles/Product-detail.module.css"
-import coffee from "../assets/images/coffee-3.png"
+import coffee from "../../assets/images/coffee-3.png"
+import styles from "./Product-detail.module.css"
+
+import Navbar from "../../Components/Navbar"
+
  class ProductDetail extends Component {
   render() {
     return (
-      <><header className={styles["header"]}>
-      <section className={styles["header-left"]}>
-        <span className={styles["tittle-web"]}>
-          <img
-            className={`${styles["coffee-img"]} ${styles["header-coffee"]} `}
-            src={coffee}
-            alt="coffee"
-          />
-          <label className={`${styles["coffee-shop"]} ${styles["text-coffee"]} `} for="tittle"
-            >Coffee Shop</label>
-        </span>
-      </section>
-      <section className={styles["header-middle"]}>
-        <nav className={styles["nav-header"]}>
-          <Link to="/"><span className={styles["home"]}>Home</span></Link>
-          <Link to="/product"><span className={styles["product"]}>Product</span></Link>
-          <span className={styles["your-cart"]}>Your cart</span>
-          <span className={styles["history"]}>History</span>
-        </nav>
-      </section>
-      <section className={styles["header-right"]}></section>
-    </header>
+      <>
+      <Navbar />
     <main className={styles["main"]}>
       <section className={styles["box-left"]}>
         <section className={styles["page-tittle"]}>

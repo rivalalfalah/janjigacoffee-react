@@ -2,12 +2,16 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styles from"./NewProduct.module.css";
 import "bootstrap/dist/css/bootstrap.css";
+
+import Navbar from "../../Components/Navbar"
+
 import camera from "../../assets/images/profil.jpg";
 
 export default class newProduct extends Component {
   render() {
     return (
       <>
+      <Navbar />
         <div className="container-fluid border-top mb-5">
           {/* breadcrumb */}
           <div className="container">

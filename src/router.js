@@ -3,14 +3,14 @@ import { createBrowserRouter } from "react-router-dom";
 //import App from "./pages/App";
 
 //import Error from "./pages/Error";
-import Login from "./pages/Login";
-import Home from "./pages/Home";
-import Product from "./pages/Product";
-import Profile from "./pages/Profile";
-import SignUp from "./pages/SignUp";
-import ProductDetail from "./pages/ProductDetail";
-import Home2 from "./pages/Home/index"
-import NewProduct from "./pages/NewProduct/index"
+import Login from "./pages/Login/Login";
+import Product from "./pages/Product/Product";
+import Profile from "./pages/Profile/Profile";
+import SignUp from "./pages/SignUp/SignUp";
+import ProductDetail from "./pages/ProductDetail/ProductDetail";
+import Home2 from "./pages/Home/index";
+import NewProduct from "./pages/NewProduct/index";
+import ProductPayment from "./pages/ProductPayment/ProductPayment";
 
 import PrivateElement from "./Components/privateElement";
 
@@ -21,11 +21,19 @@ const router = createBrowserRouter([
   { path: "/login", element: <Login /> },
   { path: "/", element: <Home2 /> },
   { path: "/product", element: <Product /> },
-  { path: "/new-product", element: <NewProduct />},
+  {
+    path: "product-payment",
+    element: (
+      <PrivateElement allowedRoles={[1]}>
+        <ProductPayment />
+      </PrivateElement>
+    ),
+  },
+  { path: "/add-product", element: <NewProduct /> },
   {
     path: "/profile",
     element: (
-      <PrivateElement alowedRoles = {[1]}>
+      <PrivateElement allowedRoles={[1]}>
         <Profile />
       </PrivateElement>
     ),

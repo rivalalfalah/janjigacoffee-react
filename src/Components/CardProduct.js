@@ -15,7 +15,7 @@ function Card_Product(props) {
     return (
         <div
             onClick={() => {
-                navigate(`/productdetail/${props.id}`);
+                navigate(`/product-detail/${props.id}`);
             }}
 
             className={`col-md-2 p-4 position-relative text-wrap ${styles["content-product"]}`}>

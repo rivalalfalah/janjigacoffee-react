@@ -1,19 +1,22 @@
-import {
-  legacy_createStore as createStore,
-  applyMiddleware,
-  combineReducers,
-} from "redux";
-import logger from "redux-logger";
-import rpm from "redux-promise-middleware";
+import { configureStore } from "@reduxjs/toolkit";
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
+import reducers from "./reducers/index";
 
-import loginReducer from "./reducers/Login";
-import counterReducer from "./reducers/Login";
+const persistConfig = {
+    key: "Janjigacoffee",
+    storage,
+};
 
-const middleware = applyMiddleware(rpm, logger);
-const reducers = combineReducers({
-  counter: counterReducer,
-  login: loginReducer,
+const persistedReducer = persistReducer(persistConfig, reducers);
+const store = configureStore({
+    reducer: persistedReducer,
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+            thunk: true,
+            serializableCheck: false,
+        })
 });
-const store = createStore(reducers, middleware);
 
+export const persistedStore = persistStore(store);
 export default store;

@@ -5,7 +5,7 @@ import axios from "axios";
 
 // import component
 import NavbarAdmin from "../../Components/NavbarAdmin";
-import Footer from "../../Components/Footer";
+import Footer from "../../Components/footer";
 
 // import css
 import styles from "../../styles/adminCSS/newPromo.module.css";

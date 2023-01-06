@@ -15,7 +15,7 @@ import Modal from "react-bootstrap/Modal";
 import styles from "../styles/Profile.module.css";
 
 // import Component
-import Footer from "../Components/Footer.js";
+import Footer from "../Components/footer.js";
 import titlebar from "../utility/WebDinamis";
 import Navbar from "../Components/Navbar.js";
 // import NavbarAdmin from "../components/NavbarAdmin";

@@ -3,7 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // import component
-import Footer from "../../Components/Footer";
+import Footer from "../../Components/footer";
 // import withParams from "../../helpers/withRouteParams";
 import NavbarAdmin from "../../Components/NavbarAdmin";
 import img_product from "../../asset/profil-bg.png";

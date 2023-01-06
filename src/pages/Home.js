@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import styles from "../styles/Home.module.css";
 
 // import footer
-import Footer from "../Components/Footer.js";
+import Footer from "../Components/footer.js";
 import titlebar from "../utility/WebDinamis";
 import Navbar from "../Components/Navbar";
 import NavbarAdmin from "../Components/NavbarAdmin";

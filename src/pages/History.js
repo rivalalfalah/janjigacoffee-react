@@ -4,7 +4,7 @@ import Axios from "axios";
 import styles from "../styles/History.module.css";
 import Navbar from "../Components/Navbar";
 import NavbarAdmin from "../Components/NavbarAdmin";
-import Footer from "../Components/Footer";
+import Footer from "../Components/footer";
 import CardHistory from "../Components/CardHistory";
 import Spinner from "react-bootstrap/Spinner";
 import titlebar from "../utility/WebDinamis";

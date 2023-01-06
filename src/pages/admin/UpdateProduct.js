@@ -12,7 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 // import component
 import img_product from "../../asset/profil-bg.png";
 // import Navbar from "../../components/Navbar"
-import Footer from "../../Components/Footer";
+import Footer from "../../Components/footer";
 // import withParams from "../../helpers/withRouteParams";
 import NavbarAdmin from "../../Components/NavbarAdmin";
 // import NavbarnotLogin from "../../components/Navbar-notLogin"

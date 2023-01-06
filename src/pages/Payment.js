@@ -2,7 +2,7 @@ import React from "react";
 
 // import Component
 import Navbar from "../Components/Navbar.js";
-import Footer from "../Components/Footer.js";
+import Footer from "../Components/footer.js";
 import titlebar from "../utility/WebDinamis";
 // import CardPayment from '../components/CardPayment.js'
 

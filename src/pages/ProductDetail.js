@@ -10,7 +10,7 @@ import styles from "../styles/ProductDetail.module.css";
 
 // import components
 import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
+import Footer from "../Components/footer";
 import titlebar from "../utility/WebDinamis";
 // import CounterActions from "../redux/actions/couter"
 // import withNavigate from "../helpers/withNavigate";

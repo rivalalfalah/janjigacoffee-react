@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 // import Navbar from "../../components/Navbar"
 import NavbarAdmin from "../../Components/NavbarAdmin";
 // import NavbarnotLogin from "../../components/Navbar-notLogin"
-import Footer from "../../Components/Footer";
+import Footer from "../../Components/footer";
 
 // import css
 import styles from "../../styles/adminCSS/newPromo.module.css";

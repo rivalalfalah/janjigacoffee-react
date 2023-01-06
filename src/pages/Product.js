@@ -7,7 +7,7 @@ import styles from "../styles/Product.module.css";
 import Navbar from "../Components/Navbar";
 import NavbarAdmin from "../Components/NavbarAdmin"
 import NavbarnotLogin from "../Components/Navbar-notLogin";
-import Footer from "../Components/Footer";
+import Footer from "../Components/footer";
 import CardPromo from "../Components/CardPromo";
 import CardProduct from "../Components/Card-Product";
 import titlebar from "../utility/WebDinamis";

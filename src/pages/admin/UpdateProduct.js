@@ -1,10 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import axios from 'axios'
-import {
-  useNavigate,
-  useParams,
-} from "react-router-dom";
+import axios from "axios";
+import { useNavigate, useParams } from "react-router-dom";
 // import Axios from 'axios'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -17,95 +14,101 @@ import Footer from "../../Components/footer";
 import NavbarAdmin from "../../Components/NavbarAdmin";
 // import NavbarnotLogin from "../../components/Navbar-notLogin"
 // import withNavigate from "../../helpers/withNavigate";
-import {patchProduct} from "../../utility/axios"
+import { patchProduct } from "../../utility/axios";
 // import css
 import styles from "../../styles/adminCSS/Updateproduct.module.css";
 import { useEffect } from "react";
-import { Spinner } from "react-bootstrap";
+import { Button, Modal, Spinner } from "react-bootstrap";
 
 function UpdateProduct() {
-    const navigate = useNavigate();
-    const {id} = useParams()
+  const navigate = useNavigate();
+  const { id } = useParams();
 
-    const [image, setImage] = useState(null);
-    const [display, setDisplay] = useState(null);
-    const [name, setName] = useState("");
-    const [category, setCategory] = useState("");
-    const [size, setSize] = useState("");
-    const [price, setPrice] = useState("");
-    const [stock, setStock] = useState("");
-    const [description, setDescription] = useState("");
-    const [loading, setLoading] = useState(false)
-  
-    const returnInitial = () => {
-      setImage(null);
-      setDisplay(null)
-      setName("");
-      setCategory("");
-      setSize("");
-      setPrice("");
-      setStock("");
-      setDescription("");
-    };
-  
-    const inputImage = (event) => {
-          setDisplay(URL.createObjectURL(event.target.files[0]));
-          setImage(event.target.files[0]);
-    };
-  
-    const saveHandle = async () => {
-      try {
-        setLoading(true)
-        const getToken = await localStorage.getItem("token");
-        // console.log(getToken)
-        const formData = new FormData();
-        if(name)formData.append("name", name);
-        if(category)formData.append("category", category);
-        if(size)formData.append("size", size);
-        if(price)formData.append("price", price);
-        if(stock)formData.append("stock", stock);
-        if(description)formData.append("description", description);
-        if(image)formData.append("image", image);
-        await patchProduct(getToken, formData, id);
-        // await returnInitial();
-        toast.success("success edit product", {
-          position: toast.POSITION.TOP_RIGHT,
-        });
-        navigate("/product");
-        setLoading(false)
-      } catch (error) {
-        console.log(error);
-        toast.error(`failed edit product`, {
-          position: toast.POSITION.TOP_RIGHT,
-        });
-        setLoading(false)
-      }
-    };
+  const [image, setImage] = useState(null);
+  const [display, setDisplay] = useState(null);
+  const [name, setName] = useState("");
+  const [category, setCategory] = useState("");
+  const [size, setSize] = useState("");
+  const [price, setPrice] = useState("");
+  const [stock, setStock] = useState("");
+  const [description, setDescription] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [showDelete, setShowDelete] = useState(false);
 
-    const deleteProduct = () => {
-      const getToken = localStorage.getItem('token');
-      axios.patch(`https://coffeeadictbe.vercel.app/coffee/product/delete/${id}`,{}, {
-        headers: {
-          'x-access-token': getToken
-        },
-      })
+  const returnInitial = () => {
+    setImage(null);
+    setDisplay(null);
+    setName("");
+    setCategory("");
+    setSize("");
+    setPrice("");
+    setStock("");
+    setDescription("");
+  };
+
+  const inputImage = (event) => {
+    setDisplay(URL.createObjectURL(event.target.files[0]));
+    setImage(event.target.files[0]);
+  };
+
+  const saveHandle = async () => {
+    try {
+      setLoading(true);
+      const getToken = await localStorage.getItem("token");
+      // console.log(getToken)
+      const formData = new FormData();
+      if (name) formData.append("name", name);
+      if (category) formData.append("category", category);
+      if (size) formData.append("size", size);
+      if (price) formData.append("price", price);
+      if (stock) formData.append("stock", stock);
+      if (description) formData.append("description", description);
+      if (image) formData.append("image", image);
+      await patchProduct(getToken, formData, id);
+      // await returnInitial();
+      toast.success("success edit product", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+      navigate("/product");
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      toast.error(`failed edit product`, {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+      setLoading(false);
+    }
+  };
+
+  const deleteProduct = () => {
+    const getToken = localStorage.getItem("token");
+    axios
+      .patch(
+        `${process.env.REACT_APP_BACKEND_HOST}/coffee/product/delete/${id}`,
+        {},
+        {
+          headers: {
+            "x-access-token": getToken,
+          },
+        }
+      )
       .then((res) => {
         toast.success(res.data.result.msg, {
           position: toast.POSITION.TOP_RIGHT,
-        })
-        navigate("/product")
+        });
+        navigate("/product");
       })
       .catch((err) => {
-        console.log(err)
+        console.log(err);
         toast.error("internal server error", {
           position: toast.POSITION.TOP_RIGHT,
-        })
-      })
-    }
+        });
+      });
+  };
 
-    
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_BACKEND_HOST}/product/${id}`)
+    axios
+      .get(`${process.env.REACT_APP_BACKEND_HOST}/product/${id}`)
       .then((res) => {
         setImage(res.data.result.data[0].image);
         setDisplay(res.data.result.data[0].image);
@@ -117,15 +120,42 @@ function UpdateProduct() {
         setDescription(res.data.result.data[0].description);
       })
       .catch((err) => {
-        console.log(err)
-      })
-  },[])
-    
-
+        console.log(err);
+      });
+  }, []);
 
   return (
     <>
       <ToastContainer />
+      <Modal
+        show={showDelete}
+        onHide={() => setShowDelete(false)}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>select product</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>are you sure to delete promo?</Modal.Body>
+        <Modal.Footer>
+          <Button
+            variant="danger"
+            className="fw-bold text-bg-danger text-white"
+            onClick={() => {
+              setShowDelete(false);
+            }}
+          >
+            cancel
+          </Button>
+          <Button
+            variant="success"
+            className="fw-bold text-bg-success text-white"
+            onClick={deleteProduct}
+          >
+            Yes
+          </Button>
+        </Modal.Footer>
+      </Modal>
       <NavbarAdmin />
       <div className="container-fluid border-top mb-5">
         {/* breadcrumb */}
@@ -144,7 +174,10 @@ function UpdateProduct() {
                     Add new product
                   </li>
                 </ol>
-                <button className={styles['trash_button']} onClick={deleteProduct}>
+                <button
+                  className={styles["trash_button"]}
+                  onClick={deleteProduct}
+                >
                   <i className="bi bi-trash text-white fs-5" />
                 </button>
               </div>
@@ -166,10 +199,17 @@ function UpdateProduct() {
                   height="250px"
                 ></img>
               </div>
-              <button className={`${styles["change-profile"]} mt-5 rounded-5`} onClick={saveHandle} >
-                {loading ? <div className="d-flex justify-content-center align-items-center pt-3">
-                           <Spinner animation="border" />
-                        </div> : 'Save Change'}
+              <button
+                className={`${styles["change-profile"]} mt-5 rounded-5`}
+                onClick={saveHandle}
+              >
+                {loading ? (
+                  <div className="d-flex justify-content-center align-items-center pt-3">
+                    <Spinner animation="border" />
+                  </div>
+                ) : (
+                  "Save Change"
+                )}
               </button>
               <div
                 className={`${styles["profile-image"]} text-center rounded-5 mt-3 mb-5`}
@@ -179,7 +219,7 @@ function UpdateProduct() {
                   type="file"
                   name="file"
                   id="img-profile"
-                  onChange={(e)=>inputImage(e)}
+                  onChange={(e) => inputImage(e)}
                 />
               </div>
               <div className={`${styles[`delivery-hour`]} mt-5`}>
@@ -214,14 +254,14 @@ function UpdateProduct() {
                 <input
                   type="text"
                   value={name}
-                  onChange={(e)=> setName(e.target.value)}
+                  onChange={(e) => setName(e.target.value)}
                   placeholder="Type product name min. 50 characters"
                 />
                 <label for="">Price :</label>
                 <input
                   type="number"
                   value={price}
-                  onChange={(e)=> setPrice(e.target.value)}
+                  onChange={(e) => setPrice(e.target.value)}
                   placeholder="Type the price"
                 />
                 <label for="">Description :</label>
@@ -244,26 +284,38 @@ function UpdateProduct() {
                 className={`${styles.size} d-flex justify-content-start text-center mt-3`}
               >
                 <button
-                 style={size === 'M'?{backgroundColor:'#6A4029',color:'white'}:{backgroundColor:'#FFBA33'}}
+                  style={
+                    size === "M"
+                      ? { backgroundColor: "#6A4029", color: "white" }
+                      : { backgroundColor: "#FFBA33" }
+                  }
                   className="rounded-circle"
                   value="M"
-                  onClick={()=>setSize('M')}
+                  onClick={() => setSize("M")}
                 >
                   M
                 </button>
                 <button
-                 style={size === 'L'?{backgroundColor:'#6A4029',color:'white'}:{backgroundColor:'#FFBA33'}}
+                  style={
+                    size === "L"
+                      ? { backgroundColor: "#6A4029", color: "white" }
+                      : { backgroundColor: "#FFBA33" }
+                  }
                   className=" rounded-circle"
                   value="L"
-                  onClick={()=>setSize('L')}
+                  onClick={() => setSize("L")}
                 >
                   L
                 </button>
                 <button
-                style={size === 'XL'?{backgroundColor:'#6A4029',color:'white'}:{backgroundColor:'#FFBA33'}}
+                  style={
+                    size === "XL"
+                      ? { backgroundColor: "#6A4029", color: "white" }
+                      : { backgroundColor: "#FFBA33" }
+                  }
                   className=" rounded-circle"
                   value="XL"
-                  onClick={()=>setSize('XL')}
+                  onClick={() => setSize("XL")}
                 >
                   XL
                 </button>
@@ -281,29 +333,45 @@ function UpdateProduct() {
               >
                 <button
                   className=" rounded-3"
-                  style={category === 'coffee'?{backgroundColor:'#6A4029',color:'white'}:{backgroundColor:'#FFBA33'}}
-                  onClick={()=>setCategory('coffee')}
+                  style={
+                    category === "coffee"
+                      ? { backgroundColor: "#6A4029", color: "white" }
+                      : { backgroundColor: "#FFBA33" }
+                  }
+                  onClick={() => setCategory("coffee")}
                 >
                   Coffee
                 </button>
                 <button
                   className=" rounded-3"
-                  style={category === 'non coffee'?{backgroundColor:'#6A4029',color:'white'}:{backgroundColor:'#FFBA33'}}
-                  onClick={()=>setCategory('non coffee')}
+                  style={
+                    category === "non coffee"
+                      ? { backgroundColor: "#6A4029", color: "white" }
+                      : { backgroundColor: "#FFBA33" }
+                  }
+                  onClick={() => setCategory("non coffee")}
                 >
                   Non Coffee
                 </button>
                 <button
                   className=" rounded-3"
-                  style={category === 'foods'?{backgroundColor:'#6A4029',color:'white'}:{backgroundColor:'#FFBA33'}}
-                  onClick={()=>setCategory('foods')}
+                  style={
+                    category === "foods"
+                      ? { backgroundColor: "#6A4029", color: "white" }
+                      : { backgroundColor: "#FFBA33" }
+                  }
+                  onClick={() => setCategory("foods")}
                 >
                   Foods
                 </button>
                 <button
                   className=" rounded-3"
-                  style={category === 'addon'?{backgroundColor:'#6A4029',color:'white'}:{backgroundColor:'#FFBA33'}}
-                  onClick={()=>setCategory('addon')}
+                  style={
+                    category === "addon"
+                      ? { backgroundColor: "#6A4029", color: "white" }
+                      : { backgroundColor: "#FFBA33" }
+                  }
+                  onClick={() => setCategory("addon")}
                 >
                   Addon
                 </button>
@@ -312,13 +380,17 @@ function UpdateProduct() {
                 className={`${styles["save-product"]} mt-5 rounded-5`}
                 onClick={saveHandle}
               >
-                {loading ? <div className="d-flex justify-content-center align-items-center pt-3">
-                           <Spinner animation="border" />
-                        </div> : 'Save Change'}
+                {loading ? (
+                  <div className="d-flex justify-content-center align-items-center pt-3">
+                    <Spinner animation="border" />
+                  </div>
+                ) : (
+                  "Save Change"
+                )}
               </button>
               <button
                 className={`${styles["cancel-product"]} mt-3 rounded-5`}
-                onClick={()=>returnInitial()}
+                onClick={() => returnInitial()}
               >
                 Cancel
               </button>
@@ -333,4 +405,3 @@ function UpdateProduct() {
 }
 
 export default UpdateProduct;
-

@@ -17,7 +17,7 @@ import AddPromo from "./pages/admin/AddPromo";
 import ResetPass from "./pages/ResetPassword";
 import OTP from "./pages/auth/Otp";
 
-import PrivateElement from "./components/privateElement"
+import PrivateElement from "./components/PrivateElement"
 
 // import Error from "./pages/Error";
 

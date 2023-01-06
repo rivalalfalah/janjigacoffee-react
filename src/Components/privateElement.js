@@ -2,7 +2,7 @@ import React from "react";
 import { Navigate } from "react-router-dom";
 
 // props.children => mengakses komponen child
-class PrivateElement extends React.Component {
+class privateElement extends React.Component {
     render() {
         // conditional, jika true semua maka return kan komponen child
         // jika false, maka redirect
@@ -33,4 +33,4 @@ class PrivateElement extends React.Component {
     }
 }
 
-export default PrivateElement;
+export default privateElement;

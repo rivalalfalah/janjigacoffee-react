@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 import styles from "../styles/Home.module.css";
 
 // import footer
-import Footer from "../components/Footer.js";
+import Footer from "../Components/Footer.js";
 import titlebar from "../utility/WebDinamis";
-import Navbar from "../components/Navbar";
-import NavbarAdmin from "../components/NavbarAdmin";
-import NavbarnotLogin from "../components/Navbar-notLogin";
+import Navbar from "../Components/Navbar";
+import NavbarAdmin from "../Components/NavbarAdmin";
+import NavbarnotLogin from "../Components/Navbar-notLogin";
 
 // import image
 import icon_staff from "../asset/icon_staff.png";

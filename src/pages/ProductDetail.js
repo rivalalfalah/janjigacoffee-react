@@ -9,8 +9,8 @@ import {  useNavigate, useParams } from "react-router-dom";
 import styles from "../styles/ProductDetail.module.css";
 
 // import components
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 import titlebar from "../utility/WebDinamis";
 // import CounterActions from "../redux/actions/couter"
 // import withNavigate from "../helpers/withNavigate";

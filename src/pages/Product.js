@@ -4,12 +4,12 @@ import axios from "axios";
 import styles from "../styles/Product.module.css";
 
 // import navbar dan footer
-import Navbar from "../components/Navbar";
-import NavbarAdmin from "../components/NavbarAdmin"
-import NavbarnotLogin from "../components/Navbar-notLogin";
-import Footer from "../components/Footer";
-import CardPromo from "../components/CardPromo";
-import CardProduct from "../components/Card-Product";
+import Navbar from "../Components/Navbar";
+import NavbarAdmin from "../Components/NavbarAdmin"
+import NavbarnotLogin from "../Components/Navbar-notLogin";
+import Footer from "../Components/Footer";
+import CardPromo from "../Components/CardPromo";
+import CardProduct from "../Components/Card-Product";
 import titlebar from "../utility/WebDinamis";
 import { useState, useEffect } from "react";
 import {  useNavigate  } from "react-router-dom";

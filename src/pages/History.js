@@ -2,10 +2,10 @@ import { React, useState, useEffect } from "react";
 import Axios from "axios";
 
 import styles from "../styles/History.module.css";
-import Navbar from "../components/Navbar";
-import NavbarAdmin from "../components/NavbarAdmin";
-import Footer from "../components/Footer";
-import CardHistory from "../components/CardHistory";
+import Navbar from "../Components/Navbar";
+import NavbarAdmin from "../Components/NavbarAdmin";
+import Footer from "../Components/Footer";
+import CardHistory from "../Components/CardHistory";
 import Spinner from "react-bootstrap/Spinner";
 import titlebar from "../utility/WebDinamis";
 import { ToastContainer, toast } from "react-toastify";

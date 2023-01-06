@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import styles from "../styles/Signup.module.css";
 
 // Import Component
-import Footerloginsignup from "../components/Footer-login-signup";
+import Footerloginsignup from "../Components/Footer-login-signup";
 import titlebar from "../utility/WebDinamis";
 
 // Import Images

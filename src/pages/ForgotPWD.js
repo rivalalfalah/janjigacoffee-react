@@ -5,7 +5,7 @@ import axios from 'axios'
 import styles from "../styles/ForgotPWD.module.css";
 
 // import footer
-import Footerloginsignup from "../components/Footer-login-signup";
+import Footerloginsignup from "../Components/Footer-login-signup";
 import titlebar from "../utility/WebDinamis";
 
 // import images

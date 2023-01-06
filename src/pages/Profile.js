@@ -15,9 +15,9 @@ import Modal from "react-bootstrap/Modal";
 import styles from "../styles/Profile.module.css";
 
 // import Component
-import Footer from "../components/Footer.js";
+import Footer from "../Components/Footer.js";
 import titlebar from "../utility/WebDinamis";
-import Navbar from "../components/Navbar.js";
+import Navbar from "../Components/Navbar.js";
 // import NavbarAdmin from "../components/NavbarAdmin";
 // import NavbarnotLogin from "../components/Navbar-notLogin";
 import authActions from "../redux/actions/auth";

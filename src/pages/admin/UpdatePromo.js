@@ -4,8 +4,8 @@ import { editPromo } from "../../utility/axios";
 import axios from "axios";
 
 // import component
-import NavbarAdmin from "../../components/NavbarAdmin";
-import Footer from "../../components/Footer";
+import NavbarAdmin from "../../Components/NavbarAdmin";
+import Footer from "../../Components/Footer";
 
 // import css
 import styles from "../../styles/adminCSS/newPromo.module.css";

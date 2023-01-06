@@ -84,7 +84,7 @@ function UpdateProduct() {
     const getToken = localStorage.getItem("token");
     axios
       .patch(
-        `${process.env.REACT_APP_BACKEND_HOST}/coffee/product/delete/${id}`,
+        `${process.env.REACT_APP_BACKEND_HOST}/product/delete/${id}`,
         {},
         {
           headers: {
@@ -176,7 +176,7 @@ function UpdateProduct() {
                 </ol>
                 <button
                   className={styles["trash_button"]}
-                  onClick={deleteProduct}
+                  onClick={setShowDelete(true)}
                 >
                   <i className="bi bi-trash text-white fs-5" />
                 </button>

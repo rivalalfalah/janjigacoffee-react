@@ -176,7 +176,7 @@ function UpdateProduct() {
                 </ol>
                 <button
                   className={styles["trash_button"]}
-                  onClick={setShowDelete(true)}
+                  onClick={()=>setShowDelete(true)}
                 >
                   <i className="bi bi-trash text-white fs-5" />
                 </button>

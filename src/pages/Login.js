@@ -24,7 +24,7 @@ import { eyeOff } from "react-icons-kit/feather/eyeOff";
 import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import withNavigate from "../helpers/withNavigate";
+import withNavigate from "../helpers/WithNavigate";
 import { Spinner } from "react-bootstrap";
 import authActions from "../redux/actions/auth"
 import { useDispatch } from "react-redux";

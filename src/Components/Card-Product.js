@@ -2,7 +2,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import withParams from "../helpers/withRouteParams";
+import withParams from "../helpers/WithRouteParams";
 import authActions from '../redux/actions/auth'
 
 // import css

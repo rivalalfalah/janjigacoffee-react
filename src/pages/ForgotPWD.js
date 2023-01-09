@@ -50,7 +50,7 @@ const ForgotPWD = () => {
       console.log(e.target.value)
    }
 
-   titlebar("Coffee Addict | Forgot Password");   
+   titlebar("Janjigacoffrr | Forgot Password");   
    return (
       <>
          <main className={styles["container"]}>
@@ -66,7 +66,7 @@ const ForgotPWD = () => {
             <aside className={styles["right-heading"]}>
                <div className={styles["icon-coffee"]}>
                   <img src={icon_coffee} alt="icon_coffee" />
-                  <p>Coffee Addict</p>
+                  <p>Janjigacoffrr</p>
                </div>
                <form className={styles.register}>
                   <div className={`${styles["forgot-text"]} text-center`}>

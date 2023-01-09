@@ -143,7 +143,7 @@ const Product = () => {
       .catch((err) => {console.log(err); setLoading(false);});
   };
 
-  titlebar("Coffee Addict | Product");
+  titlebar("Janjigacoffrr | Product");
   return (
     <>
       {profile.role === "admin" ? (

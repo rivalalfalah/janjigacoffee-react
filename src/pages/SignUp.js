@@ -101,7 +101,7 @@ const SignUp = () => {
       });
    };
 
-   titlebar("Coffee Addict | Sign-Up");
+   titlebar("Janjigacoffrr | Sign-Up");
    return (
       <>
          <ToastContainer />
@@ -118,7 +118,7 @@ const SignUp = () => {
                      width="40px"
                      height="40px"
                   />
-                  <p>Coffee Addict</p>
+                  <p>Janjigacoffrr</p>
                   <span>Sign Up</span>
                </Link>
                <form className={styles["register"]} onSubmit={handlingRegister}>

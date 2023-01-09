@@ -128,7 +128,7 @@ function Login() {
    };
 
    /* Main Website */
-   titlebar("Coffee Addict | Login");
+   titlebar("Janjigacoffrr | Login");
    return (
       <>
          <ToastContainer />
@@ -145,7 +145,7 @@ function Login() {
                      width="40px"
                      height="40px"
                   />
-                  <p>Coffee Addict</p>
+                  <p>Janjigacoffrr</p>
                   <span>Login</span>
                </Link>
                <form className={styles.register} onSubmit={handleApi}>
@@ -214,7 +214,7 @@ export default withNavigate(Login);
 //     };
 
 //     render() {
-//         titlebar("Coffee Addict | Login")
+//         titlebar("Janjigacoffrr | Login")
 //         return (
 //             <>
 //                 <main className={styles["container"]}>
@@ -225,7 +225,7 @@ export default withNavigate(Login);
 //                     <aside className={styles["right-heading"]}>
 //                         <div className={styles["icon-coffee"]}>
 //                             <img src={icon_coffee} alt="icon_coffee" />
-//                             <p>Coffee Addict</p>
+//                             <p>Janjigacoffrr</p>
 //                             <span>Login</span>
 //                         </div>
 //                         <form className={styles.register}>

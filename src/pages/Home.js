@@ -67,7 +67,7 @@ const Home = () => {
       }
    };
 
-   titlebar("Coffee Addict | Home");
+   titlebar("Janjigacoffrr | Home");
    return (
       <>
          {navtype()}

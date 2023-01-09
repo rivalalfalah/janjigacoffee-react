@@ -29,7 +29,7 @@ export default function Navbar_notLogin() {
                      widht="27px"
                      height="27px"
                   />
-                  <span className="mt-1">Coffee Addict</span>
+                  <span className="mt-1">Janjigacoffrr</span>
                </div>
                <div
                   className={`${styles["center-nav"]} d-sm-none d-none  d-sm-none d-md-none d-lg-flex flex-row`}

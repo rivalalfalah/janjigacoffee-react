@@ -56,7 +56,7 @@ const ResetPassword = () => {
     })
   }
 
-   titlebar("Janjigacoffrr | Reset Password");   
+   titlebar("Janjigacoffee | Reset Password");   
    return (
       <>
       <ToastContainer />
@@ -73,7 +73,7 @@ const ResetPassword = () => {
             <aside className={styles["right-heading"]}>
                <div className={styles["icon-coffee"]}>
                   <img src={icon_coffee} alt="icon_coffee" />
-                  <p>Janjigacoffrr</p>
+                  <p>Janjigacoffee</p>
                </div>
                <form className={styles.register}>
                   <div className={`${styles["forgot-text"]} text-center`}>

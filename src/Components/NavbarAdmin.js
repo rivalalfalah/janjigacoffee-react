@@ -61,7 +61,7 @@ function NavbarAdmin() {
                      widht="27px"
                      height="27px"
                   />
-                  <span className="mt-1">Janjigacoffrr</span>
+                  <span className="mt-1">Janjigacoffee</span>
                </div>
                <div
                   id="navbarNav"

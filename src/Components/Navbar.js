@@ -30,7 +30,7 @@ function Navbar() {
                 height='27px'
               />
               <span className='mt-1'>
-                Janjigacoffrr
+                Janjigacoffee
               </span>
             </div>
             <div

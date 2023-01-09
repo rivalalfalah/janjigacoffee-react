@@ -98,7 +98,7 @@ class Handlingproduct extends Component {
     }
 
     render() {
-        titlebar("Janjigacoffee | Product")
+        titlebar("Coffee Addict | Product")
         return (
             <>
                 <this.navtype />

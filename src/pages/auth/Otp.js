@@ -13,7 +13,7 @@ function Otp() {
   useEffect(() => {
     axios
     .get(
-      `${process.env.REACT_APP_BACKEND_HOST}/auth/${otp}`,
+      `${process.env.REACT_APP_BACKEND_HOST}/users/verify/${otp}`,
     )
     .then(() => console.log("success"))
     .catch((err) => console.log(err));

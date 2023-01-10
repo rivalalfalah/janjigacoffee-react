@@ -147,6 +147,7 @@ function Login() {
                   />
                   <p>Janjigacoffee</p>
                   <span>Login</span>
+                  <div>hallo finn</div>
                </Link>
                <form className={styles.register} onSubmit={handleApi}>
                   <div className={styles.input}>

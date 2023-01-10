@@ -18,18 +18,19 @@ import ResetPass from "./pages/ResetPassword";
 import OTP from "./pages/auth/Otp";
 
 import PrivateElement from "./Components/privateElement"
+import PrivateElementAuth from "./Components/privateElementAuth.js";
 
 // import Error from "./pages/Error";
 
 const router = createBrowserRouter([
    // { path: "/", element: <App />, errorElement: <Error /> },
    { path: "/", element: <Home /> },
-   { path: "/login", element: <Login /> },
-   { path: "/signup", element: <Signup /> },
+   { path: "/login", element: <PrivateElementAuth><Login /></PrivateElementAuth> },
+   { path: "/signup", element:  <PrivateElementAuth><Signup /></PrivateElementAuth>},
    { path: "/product", element: <Product /> },
-   { path: "/forgotpassword", element: <ForgotPWD /> },
-   { path: "/resetpassword", element: <ResetPass /> },
-   { path: "/auth/:otp", element: <OTP /> },
+   { path: "/forgotpassword", element: <PrivateElementAuth><ForgotPWD /></PrivateElementAuth> },
+   { path: "/resetpassword", element: <PrivateElementAuth><ResetPass /></PrivateElementAuth> },
+   { path: "/auth/:otp", element:  <PrivateElementAuth><OTP /></PrivateElementAuth>},
 
    {
       path: "/profile",

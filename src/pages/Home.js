@@ -78,12 +78,10 @@ const Home = () => {
                   <div className={`row ${styles["top-content"]}`}>
                      <div className=" col-md-6 col-sm-12  d-flex flex-column">
                         <span className={styles["description-content-one"]}>
-                           Start Your Day with Coffee and Good Meals
+                           hi finaa, Start Your Day with smile and happiness
                         </span>
                         <span className={styles["description-content-two"]}>
-                           We provide high quality beans, good taste, and
-                           healthy meals made by love just for you. Start your
-                           day with us for a bigger smile!
+                        when you smile give encouragement to people who see you smile because it smiles
                         </span>
                         <Link to="" className={styles["get-started"]}>
                            <span>Get Started</span>

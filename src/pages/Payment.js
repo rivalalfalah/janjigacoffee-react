@@ -102,7 +102,7 @@ const Payment = () => {
       })
    }
 
-   titlebar("Coffee Addict | Payment");
+   titlebar("Janjigacoffee | Payment");
    return (
       <>
          {/* <!-- Start Navbar --> */}

@@ -275,7 +275,7 @@ const Profile = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  titlebar("Coffee Addict | Profile");
+  titlebar("Janjigacoffee | Profile");
 
   // console.log(image);
 

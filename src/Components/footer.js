@@ -17,7 +17,7 @@ function Footer() {
                 <div className={`container d-flex ${styles["footer-center-box"]} py-5`}>
                     <aside className={styles["footer-left"]}>
                         <img src={icon_coffee} alt="icon_coffee" />
-                        <span className={styles["footer-title-left"]}>Coffee Addict</span>
+                        <span className={styles["footer-title-left"]}>Janjigacoffee</span>
                         <p>Coffee Shop is a store that sells some good meals, and especially coffee. We provide high quality
                             beans
                         </p>

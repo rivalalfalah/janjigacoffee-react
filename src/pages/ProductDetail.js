@@ -106,7 +106,7 @@ const ProductDetail = () => {
       }))
    }
 
-   titlebar("Coffee Addict | Product Detail");
+   titlebar("Janjigacoffee | Product Detail");
    return (
       <>
          <Navbar />

@@ -121,7 +121,7 @@ const History = () => {
       );
    };
 
-   titlebar("Coffee Addict | History");
+   titlebar("Janjigacoffee | History");
    return (
       <>
          {profile.role === "admin" ? <NavbarAdmin /> : <Navbar />}

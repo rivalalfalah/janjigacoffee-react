@@ -34,10 +34,10 @@ function NavbarAdmin() {
 
    const handleLogout = async () => {
       try {
-         dispatch(authAction.logoutThunk(localStorage.getItem("token")));
-         SuccessMessage();
+         await dispatch(authAction.logoutThunk(localStorage.getItem("token")));
+         await SuccessMessage();
+         await setShow(false);
          navigate("/login");
-         setShow(false);
       } catch (err) {
          toast.error(err.response.data.msg, {
             position: toast.POSITION.TOP_RIGHT,

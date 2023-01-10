@@ -260,10 +260,10 @@ const Profile = () => {
   //handleLogout => untuk menghapus token dan role di localstorage serta menghapus di redis BE
   const handleLogout = async () => {
     try {
-      dispatch(authAction.logoutThunk(localStorage.getItem("token")));
-      LogoutMessage();
+      await dispatch(authAction.logoutThunk(localStorage.getItem("token")));
+      await LogoutMessage();
+      await setShow(false);
       navigate("/login");
-      setShow(false);
     } catch (err) {
       toast.error(err.response.data.msg, {
         position: toast.POSITION.TOP_RIGHT,

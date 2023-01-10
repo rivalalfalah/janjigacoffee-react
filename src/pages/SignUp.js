@@ -53,11 +53,12 @@ const SignUp = () => {
             passwords: passwords,
             phone_number: phone_number,
          })
-         .then((response) => {
-            console.log(response.data.result);
+         .then(() => {
             SuccessMessage(); //menampilkan notifikasi berhasil
-            navigate("/login")
-            setLoading(false)
+            setLoading(false);
+            setTimeout(() => {
+               navigate("/login")
+            }, 3000);
          })
          .catch((err) => {
             // console.log(err.response.data.msg);

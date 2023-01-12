@@ -21,6 +21,21 @@
     color: #9e684b;
 }
 
+.center-nav span{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #4F5665;
+    cursor: pointer;
+}
+
+.center-nav span:hover  {
+    transform: scale(1.5);
+    color: #9e684b;
+}
+
 .burger {
     text-decoration: none;
     color: #0B132A;

@@ -78,18 +78,18 @@ function Login() {
    const handleApi = async (e) => {
       try {
          e.preventDefault();
+         setLoading(true)
          if(!email || !passwords ) return  (toast.error("Data register can't be empty", {
          position: toast.POSITION.TOP_RIGHT,
          }), setLoading(false))
          const response = await LoginUser({email, passwords})
          localStorage.setItem("token", response.data.result.data.token);
          localStorage.setItem("role", response.data.result.data.role);
-         await dispatch(authActions.userIDThunk(response.data.result.data.token),
-         () => {
-            SuccessMessage();
-         })
-         navigate("/")
-         setLoading(false)
+         await dispatch(authActions.userIDThunk(response.data.result.data.token));
+         await SuccessMessage()
+         setTimeout(() => {
+            navigate("/")
+         }, 3000);
       } catch (error) {
          ErrorMessage(error.response.data.msg.msg);
          setLoading(false)

@@ -14,7 +14,6 @@ import Updateproduct from "./pages/admin/UpdateProduct";
 import AddProduct from "./pages/admin/AddProduct";
 import Updatepromo from "./pages/admin/UpdatePromo";
 import AddPromo from "./pages/admin/AddPromo";
-import ResetPass from "./pages/ResetPassword";
 import OTP from "./pages/auth/Otp";
 
 import PrivateElement from "./Components/privateElement"
@@ -29,7 +28,6 @@ const router = createBrowserRouter([
    { path: "/signup", element:  <PrivateElementAuth><Signup /></PrivateElementAuth>},
    { path: "/product", element: <Product /> },
    { path: "/forgotpassword", element: <PrivateElementAuth><ForgotPWD /></PrivateElementAuth> },
-   { path: "/resetpassword", element: <PrivateElementAuth><ResetPass /></PrivateElementAuth> },
    { path: "/auth/:otp", element:  <PrivateElementAuth><OTP /></PrivateElementAuth>},
 
    {

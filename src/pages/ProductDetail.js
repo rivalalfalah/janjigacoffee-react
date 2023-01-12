@@ -24,6 +24,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import authAction from "../redux/actions/auth";
+import { toast, ToastContainer } from "react-toastify";
 
 // import image
 // import prod_cold_brew from "../asset/img_coldbrew.png";
@@ -94,8 +95,10 @@ const ProductDetail = () => {
    };
 
    const handleAddtoCart = () => {
-      if(!deliv) return (console.log("delivery method harus di isi"))
-      dispatch(authAction.productThunk({
+      if(!deliv) return (toast.error("delivery method harus di isi",{
+         position: toast.POSITION.TOP_RIGHT,
+      }))
+       dispatch(authAction.productThunk({
          id_product: parseInt(id),
          price: price,
          name_product: name,
@@ -103,12 +106,14 @@ const ProductDetail = () => {
          image: image,
          size: size,
          delivery_method: parseInt(deliv)
-      }))
+      }));
+      return navigate(`/payment`)
    }
 
    titlebar("Janjigacoffee | Product Detail");
    return (
       <>
+      <ToastContainer />
          <Navbar />
          <main className="container">
             <div className="row d-flex justify-content-center align-content-center flex-column flex-md-row position-relative">
@@ -244,7 +249,7 @@ const ProductDetail = () => {
                         <span className="fs-4 fw-bold">Checkout</span>
                         <button
                            className={styles.button_checkout}
-                           onClick={() => {handleAddtoCart();navigate(`/payment`)}}
+                           onClick={() => {handleAddtoCart()}}
                         >
                            <i className="bi bi-arrow-right"></i>
                         </button>

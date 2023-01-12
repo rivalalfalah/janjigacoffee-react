@@ -263,7 +263,10 @@ const Profile = () => {
       await dispatch(authAction.logoutThunk(localStorage.getItem("token")));
       await LogoutMessage();
       await setShow(false);
-      navigate("/login");
+      setTimeout(() => {
+        navigate("/login");
+      }, 1000);
+      
     } catch (err) {
       toast.error(err.response.data.msg, {
         position: toast.POSITION.TOP_RIGHT,
@@ -381,7 +384,7 @@ const Profile = () => {
               height="180px"
               className="rounded-circle mt-4"
             />
-            <span className={styles["name-profile"]}>{displayname}</span>
+            <span className={styles["name-profile"]}>{profile.displayname}</span>
             <p className={styles["email-profile"]}>{profile.email}</p>
             <div className={`${styles["profile-image"]} text-center rounded-5`}>
               <label for="img-profile">Choose Photo</label>
@@ -393,12 +396,12 @@ const Profile = () => {
               />
               {/* style="display:none;" */}
             </div>
-            <button
+            {image && <button
               className={`${styles["remove-profile"]} mt-3 rounded-5`}
               onClick={handleCancelImage}
             >
               Remove Photo
-            </button>
+            </button>}
             <button
               className={`${styles["editpwd-profile"]} mt-5 rounded-5`}
               onClick={(e) => {

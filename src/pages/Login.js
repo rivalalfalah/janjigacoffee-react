@@ -146,7 +146,7 @@ function Login() {
                      height="40px"
                   />
                   <p>Janjigacoffee</p>
-                  <span>Login, hallo finaa</span>
+                  <span>Login</span>
                </Link>
                <form className={styles.register} onSubmit={handleApi}>
                   <div className={styles.input}>

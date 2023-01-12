@@ -77,7 +77,7 @@ const ProductDetail = () => {
          .catch((err) => {
             console.log(err);
          });
-   }, []);
+   }, [url]);
 
    // const totalPrice = () => {
    //    const getPrice = price;

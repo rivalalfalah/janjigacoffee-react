@@ -134,9 +134,9 @@ function UpdateProduct() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>select product</Modal.Title>
+          <Modal.Title>delete product</Modal.Title>
         </Modal.Header>
-        <Modal.Body>are you sure to delete promo?</Modal.Body>
+        <Modal.Body>are you sure to delete product?</Modal.Body>
         <Modal.Footer>
           <Button
             variant="danger"

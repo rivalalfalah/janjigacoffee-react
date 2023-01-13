@@ -194,7 +194,7 @@ function UpdatePromo() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>select product</Modal.Title>
+          <Modal.Title>delete promo</Modal.Title>
         </Modal.Header>
         <Modal.Body>are you sure to delete promo?</Modal.Body>
         <Modal.Footer>

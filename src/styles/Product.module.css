@@ -2,10 +2,6 @@
     font-family: 'Rubik', sans-serif;
 }
 
-
-
-
-
 .title-promo {
     font-family: 'Rubik';
     font-style: normal;
@@ -98,6 +94,7 @@
     gap: 9%;
     min-height: 50vh;
     margin-left: 50px;
+
 }
 
 .note-price {
@@ -186,4 +183,27 @@
 
 .button-prev:hover {
     background-color: #c48200;
+}
+
+@media only screen and (max-width: 835px) {
+    .sort {
+        width: 30%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 20px;
+        margin-right: 0px;
+        border: 2px solid #FFBA33;
+        border-radius: 20px;
+    }
+
+    /*Big smartphones [426px -> 600px]*/
+    .list-content {
+        padding-top: 120px;
+        gap: 9%;
+        min-height: 50vh;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+    }
 }
